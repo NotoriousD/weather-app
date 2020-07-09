@@ -52,7 +52,9 @@
     "chart.js": "^2.9.3",
     "core-js": "^3.6.4",
     "handlebars": "^4.7.3",
+    "jquery": "^3.5.1",
     "lodash.debounce": "^4.0.8",
-    "moment": "^2.27.0"
+    "moment": "^2.27.0",
+    "slick-carousel": "^1.8.1"
   }
 }
