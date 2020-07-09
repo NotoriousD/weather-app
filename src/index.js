@@ -1,10 +1,17 @@
-import {
-  getGeolocation
-} from './components/geolocation';
 import './styles.css';
 import './css/page.scss';
-import './components/api';
+import './media.css'
+import pixabayApi from './components/pixabay_api_service';
+import './components/rendering_degree'
+import './components/api'
 
-getGeolocation();
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
 
-import './components/rendering_degree.js';
+pixabayApi
+  .fetchPictures()
+  .then(images => {
+    const number = getRandomInt(3);
+    document.body.style.backgroundImage = `url(${images.hits[number].largeImageURL})`
+  })

@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid red;
+  outline: none;
 }
 
 html {
@@ -16,13 +16,15 @@ body {
   font-family: 'Lato', sans-serif;
   position: relative;
   overflow: hidden;
+  margin: 0 !important;
   max-width: 100%;
   width: 100%;
-
+  min-height: 100vh;
   font-size: 14px;
-  /* background-image: url('./images/fon@2x.png');
   background-repeat: no-repeat;
-  background-position: center; */
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
 }
 
 .vh-list {

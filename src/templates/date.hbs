@@ -1,3 +1,11 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/es-us.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.min.js"></script>
+<script>
+    Handlebars.registerHelper('format', function(date) {
+        return moment(date).format('hh:mm');
+    });
+</script>
+
 <div class="vh-data__date">
     <p class="vh-data__date-number vh-date__font">8</p>
     <p class="vh-data__date-day vh-date__font">Sat</p>
@@ -15,10 +23,10 @@
 <ul class="vh-data__sun-list vh-list">
     <li class="vh-sun__item ">
         <img src="./images/sunrise.png" alt="sunrise" width="25" height="33">
-        <p class="vh-item__after">07:04</p>
+        <p class="vh-item__after">{{format sys.sanrise}}</p>
     </li>
     <li class="vh-sun__item vh-item__before">
         <img src="./images/sunset.png" alt="sunrise" width="25" height="33">
-        <p>17:05</p>
+        <p>{{format sys.sunset}}</p>
     </li>
 </ul>

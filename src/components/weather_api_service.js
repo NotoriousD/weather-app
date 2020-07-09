@@ -14,8 +14,8 @@ export default {
   //   lon: '',
   //   query: '',
   query: 'Kyiv',
-  fetchCurrentWeatherByCoord() {
-    const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}`;
+  fetchCurrentWeatherByCoord(lat, lon) {
+    const requestParams = `lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
     return fetch(baseUrl + curentWeather + requestParams)
       .then(response => response.json())
 
@@ -35,7 +35,7 @@ export default {
   },
 
   fetchWeatherForecastByCoord() {
-    const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}`;
+    const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}&units=metric`;
     return fetch(baseUrl + forcast + requestParams)
       .then(response => response.json())
 
@@ -45,7 +45,7 @@ export default {
   },
 
   fetchWeatherForecastByCity() {
-    const requestParams = `q=${this.query}&appid=${key}`;
+    const requestParams = `q=${this.query}&appid=${key}&units=metric`;
     return fetch(baseUrl + forcast + requestParams)
       .then(response => response.json())
 
