@@ -18,21 +18,17 @@ export default {
     const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}`;
     return fetch(baseUrl + curentWeather + requestParams)
       .then(response => response.json())
-      .then(weather => {
-        console.log(weather);
-      })
+
       .catch(error => {
         console.log(error);
       });
   },
 
   fetchCurrentWeatherByCity() {
-    const requestParams = `q=${this.query}&appid=${key}`;
+    const requestParams = `q=${this.query}&appid=${key}&units=metric`;
     return fetch(baseUrl + curentWeather + requestParams)
       .then(response => response.json())
-      .then(weather => {
-        console.log(weather);
-      })
+
       .catch(error => {
         console.log(error);
       });
@@ -42,9 +38,7 @@ export default {
     const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}`;
     return fetch(baseUrl + forcast + requestParams)
       .then(response => response.json())
-      .then(weather => {
-        console.log(weather);
-      })
+
       .catch(error => {
         console.log(error);
       });
@@ -54,9 +48,7 @@ export default {
     const requestParams = `q=${this.query}&appid=${key}`;
     return fetch(baseUrl + forcast + requestParams)
       .then(response => response.json())
-      .then(weather => {
-        console.log(weather);
-      })
+
       .catch(error => {
         console.log(error);
       });

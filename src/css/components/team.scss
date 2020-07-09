@@ -1,0 +1,71 @@
+.team__list{
+    padding-top: 10px;
+} 
+
+.team__item{
+    flex-basis: 380px; 
+    position: relative;
+
+    &-green{
+        width: 380px;
+        height: 470px;
+        background-color: $second-acent-green-color;
+        @extend %marg-padg;
+        margin-bottom: 24px;
+      }
+
+    &-img{
+        width: 380px;
+        height: 470px;
+        margin-bottom: 24px;
+    }
+
+    &-name{
+        text-transform: uppercase;
+        @extend %marg-auto-padg;
+        color: $secondary-black-color; 
+        margin-bottom: 6px;
+        text-align: center;
+    }
+    
+    &-ocupation{
+        font-family: $second-font-stack;
+        font-weight: 300;
+        @include font-settings();
+        font-style: italic;
+        text-align: center;
+        @extend %marg-auto-padg;
+        color: $secondary-light-grey-color;
+    }
+
+    &-overlay{
+        @include align-flex('align-centr');
+        width: 380px;
+        height: 470px;
+        position: absolute; /*подложку для hover item-team*/
+        top: -10px;
+        left: -10px;
+        
+        @extend %marg-padg;
+        background: linear-gradient(to top,  $bg-gradient-yelow, 
+                                             $bg-gradient-red
+                                    ); 
+        opacity: 0;
+    }
+
+    &:hover .team__item-overlay,
+    &:focus .team__item-overlay
+    {    
+        opacity: 1;
+        transition: opacity 0.2s linear;
+    }
+
+    &:hover .team__item-img{
+        transform: translate(-10px,-10px);
+        transition: transform 0.2s linear; 
+    }
+}
+
+ 
+
+
