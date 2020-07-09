@@ -1,0 +1,18 @@
+<div class="vh-degree container vh-bg">
+    <img src="http://openweathermap.org/img/wn/{{#each weather}}{{icon}}@2x.png" alt="{{description}}{{/each}}"
+        width="42" class="vh-degree__img">
+    <p class="vh-degree__country">{{name}}, {{sys.country}}</p>
+    <div class="vh-degree__temperatura">
+        <p class="vh-temperatura-now">{{main.temp}}</p>
+        <ul class="vh-temperatura-list vh-list">
+            <li class="vh-list__item vh-list__item-border">
+                <p class=" vh-item__name">min</p>
+                <p class="vh-item__temprt">{{main.temp_min}}</p>
+            </li>
+            <li class="vh-list__item">
+                <p class="vh-item__name">max</p>
+                <p class="vh-item__temprt">{{main.temp_max}}</p>
+            </li>
+        </ul>
+    </div>
+</div>
