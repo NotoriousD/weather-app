@@ -1,0 +1,14 @@
+{{#each this}}
+
+<div class="pm_info_item">
+    <div class="pm_day_week">${getWeekDay(data.list[i].dt)}</div>
+    <div data-days="${getDayNumber(data.list[i].dt)}" class="pm_day_month">${getMonthDay(data.list[i].dt)}</div>
+    <div class="pm_img_5days"><img src='https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}.png'></div>
+    <div class="pm_temp_container">
+        <div class="pm_temp"><span>min</span>${Math.round(data.list[i].main.temp_min)}°</div>
+        <div class="pm_temp"><span>max</span>${Math.round(data.list[i].main.temp_max)}°</div>
+    </div>
+    <div data-counter="${index++}" id="pm_infoBtn" class="pm_more_info">more info</div>
+</div>`
+
+{{/each}}
