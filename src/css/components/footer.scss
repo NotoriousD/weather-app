@@ -1,0 +1,36 @@
+.footer{
+    @include sp-flex('align-centr');
+    min-height: 66px;
+    border-top: 1px solid #e5e5e5;
+
+&__text,
+&__link{
+    @extend %marg-padg;
+    padding-top: 30px;
+    padding-bottom: 26px;
+    font-family: 'Open Sans', sans-serif;
+    @include font-settings(16px, 28px);
+    color: $secondary-black-color;
+    text-transform: capitalize;
+}
+&__link{
+    text-decoration: none;
+    color: $second-acent-green-color;
+}
+
+&__form{
+    display: flex;
+}
+
+ .footer-input {
+    font-family: $second-font-stack;
+    font-size: 15px;
+    font-style: italic;
+    @extend %marg-padg;
+    color: #cccccc;
+    border: 1px solid #e7e7e7;
+    width: 234px;
+    height: 44px;
+}
+
+}

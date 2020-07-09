@@ -1,0 +1,19 @@
+.banner{
+    min-height: 1000px;
+    background: linear-gradient(to top,  $bg-gradient-yelow, 
+                                         $bg-gradient-red
+                                ),
+                url("../images/Layer15.png");
+    @include bg-image('bg-cover');
+    color: $main-font-color;
+    text-align: center;
+}
+
+@media (min-resolution:192dpi), (min-resolution: 2dppx){
+    .banner{
+        background: linear-gradient(to top,  $bg-gradient-yelow, 
+                                             $bg-gradient-red
+                                    ),
+                url("../images/Layer15@2x.png");
+    }   
+} 
