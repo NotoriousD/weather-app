@@ -38,7 +38,13 @@ export default {
     const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}&units=metric`;
     return fetch(baseUrl + forcast + requestParams)
       .then(response => response.json())
+<<<<<<< HEAD
+      // .then(weather => {
+      //   console.log(weather);
+      // })
+=======
 
+>>>>>>> dev
       .catch(error => {
         console.log(error);
       });
