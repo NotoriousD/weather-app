@@ -1,0 +1,24 @@
+.butn{
+    @extend %button;
+    font-weight: 700;  
+    text-transform: uppercase;
+    color: $main-font-color;   
+}
+
+.butt-learn {
+    text-align: center;
+    min-width: 160px;
+    min-height: 40px;   
+    background-color: $main-font-black-color-butn;
+    border: 1px solid $secondary-black-color;
+
+    &:hover, &:focus{
+        border: 3px solid $main-font-color;
+    }
+}
+
+.footer__button{
+    background-color: $second-acent-green-color;  
+    width: 150px;
+    height: 44px;
+}

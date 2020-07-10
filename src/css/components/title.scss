@@ -1,0 +1,21 @@
+.title{
+    @include align-flex('all-cntr');
+}
+
+.title-site{
+    font-family: $main-font-cursive;
+    font-weight: 400;
+    @include font-settings(72px, 86px);
+    @extend %marg-auto-padg;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+
+    &-description{
+        @include font-settings(150px, 140px);
+        font-weight: 700;
+        text-transform: uppercase;
+        @extend %marg-auto-padg;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+}

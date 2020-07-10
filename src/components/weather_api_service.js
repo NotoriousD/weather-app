@@ -14,25 +14,21 @@ export default {
   //   lon: '',
   //   query: '',
   query: 'Kyiv',
-  fetchCurrentWeatherByCoord() {
-    const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}`;
+  fetchCurrentWeatherByCoord(lat, lon) {
+    const requestParams = `lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
     return fetch(baseUrl + curentWeather + requestParams)
       .then(response => response.json())
-      .then(weather => {
-        console.log(weather);
-      })
+
       .catch(error => {
         console.log(error);
       });
   },
 
   fetchCurrentWeatherByCity() {
-    const requestParams = `q=${this.query}&appid=${key}`;
+    const requestParams = `q=${this.query}&appid=${key}&units=metric`;
     return fetch(baseUrl + curentWeather + requestParams)
       .then(response => response.json())
-      .then(weather => {
-        console.log(weather);
-      })
+
       .catch(error => {
         console.log(error);
       });
@@ -42,21 +38,23 @@ export default {
     const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}&units=metric`;
     return fetch(baseUrl + forcast + requestParams)
       .then(response => response.json())
+<<<<<<< HEAD
       // .then(weather => {
       //   console.log(weather);
       // })
+=======
+
+>>>>>>> dev
       .catch(error => {
         console.log(error);
       });
   },
 
   fetchWeatherForecastByCity() {
-    const requestParams = `q=${this.query}&appid=${key}`;
+    const requestParams = `q=${this.query}&appid=${key}&units=metric`;
     return fetch(baseUrl + forcast + requestParams)
       .then(response => response.json())
-      .then(weather => {
-        console.log(weather);
-      })
+
       .catch(error => {
         console.log(error);
       });

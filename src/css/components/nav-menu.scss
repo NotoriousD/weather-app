@@ -1,0 +1,57 @@
+.nav-menu{
+    @extend %list;
+    @include sp-flex('sp-between');
+    flex-basis: 612px;
+}
+
+.nav-menu__item {
+    &::after{
+        @include pseudo(block);       
+        margin: 0 auto; 
+        margin-top: 10px; 
+        width: 50px;
+        height: 3px;
+        background-color: $main-acent-font-color; 
+        transition: transform 200ms ease-in-out; 
+        transform: scaleX(0); /*ужимаю псевдоэлемент до нуля*/
+    }
+
+    &:hover::after, &:focus::after{
+        @include pseudo(block);
+        transform: scaleX(1); /*показываю рысочку*/ 
+        } 
+}
+
+.nav-menu__link
+{   @extend %link;
+    color: $main-font-color;
+    text-transform: uppercase; /*заглавные буквы*/
+    transition: color 0.5s linear;  
+
+    &:hover, &:focus
+   {
+    color: $main-acent-font-color;
+    transition: 0.4s linear;
+   }
+}
+
+.nav-menu__link-a{
+    @extend %link;
+    width: 18px;
+    height: 18px;
+
+   &:hover .nav-menu__icon{
+        fill: $main-acent-font-color;
+    }
+}
+
+.nav-menu__icon{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    fill: $main-font-color;
+    transition: fill 0.4s linear;
+}
+
+
+
