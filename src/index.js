@@ -4,4 +4,4 @@ import './components/5dayModule';
 // import './components/5dayHeading'
 // import './components/5daySlider'
 
-import './compgonents/chart';
+import './components/chart';
