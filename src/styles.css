@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 * {
   outline: none;
 }
@@ -18,7 +15,7 @@ html {
 body {
   font-family: 'Lato', sans-serif;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0 !important;
   max-width: 100%;
   width: 100%;
@@ -346,9 +343,6 @@ body {
   .wrapper {
     width: 940px;
   }
-
-
-
   .vh-bg {
     min-height: 302px;
     margin-bottom: 30px;
@@ -363,7 +357,4 @@ body {
     display: flex;
     flex-wrap: nowrap;
   }
-
-
 }
->>>>>>> dev
