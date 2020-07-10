@@ -1,3 +1,5 @@
+//тестил криво работает файл не подключен
+
 $('.slider').slick({
   dots: false,
   infinite: false,
