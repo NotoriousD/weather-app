@@ -1,0 +1,42 @@
+.service__item{
+    position: relative;
+    flex-basis: 380px; 
+    @extend %marg-padg;
+    padding-left: 80px;
+    margin-bottom: 0;    
+
+    &:nth-child(-n+3){
+        margin-bottom: 98px;
+    } 
+    
+    &-name {
+        text-transform: uppercase;
+        @extend %marg-auto-padg;
+        color: $secondary-black-color; 
+    }
+    
+    &-text {
+        font-family: $second-font-stack;
+        font-weight: 400;
+        @include font-settings();
+        @extend %marg-auto-padg;
+        color: $secondary-light-grey-color;
+    }
+}
+
+.service__icon{
+&::before{
+    position: absolute;
+    left: 24px;
+    top: 0;
+    @include pseudo();
+    
+    height: 32px;
+    width: 32px;
+    @include bg-image('bg-contain');
+}
+}
+
+$icons: ALARM, LINEGRAPH, COMPUTER, BOOK, HOME, IMAGE;
+
+@include generate-pseudo-icons ('service__icon--', $icons, '../images/service/', 'png');
