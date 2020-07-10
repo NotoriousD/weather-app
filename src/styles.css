@@ -1,6 +1,6 @@
-* {
-  outline: none;
-}
+/* * {
+  outline: 1px solid red;
+} */
 
 html {
   box-sizing: border-box;
@@ -29,7 +29,7 @@ body {
 
 .vh-list {
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-align: center;
 
@@ -38,12 +38,7 @@ body {
   justify-content: center;
 }
 
-.wrapper {
-  width: 320px;
-  margin: 0 auto;
-}
-
-.container {
+.vh-container {
   margin: 0 auto;
   padding: 0;
   width: 280px;
@@ -51,6 +46,11 @@ body {
 
 .vh-weather {
   color: rgb(255, 255, 255);
+}
+
+.bbb {
+
+  text-align: center;
 }
 
 .vh-degree,
@@ -62,7 +62,9 @@ body {
 }
 
 .vh-bg {
-  text-align: inherit;
+  margin: 0 auto;
+  padding: 0;
+
   min-height: 190px;
   margin-bottom: 32px;
 
@@ -122,13 +124,17 @@ body {
 }
 
 .vh-temperatura-list {
-  min-width: 95px;
+  width: 95px;
   display: flex;
   justify-content: space-around;
 }
 
-.vh-list__item-border {
+.vh-list__item {
   padding: 0 10px;
+}
+
+.vh-list__item-border {
+
   border-right: 1px solid rgba(255, 255, 255, 0.102);
 }
 
@@ -153,15 +159,14 @@ body {
 /* стили для блока с кнопками */
 .vh-button {
   margin: 0 auto;
-  min-width: 280px;
-
+  padding: 0;
   margin-bottom: 32px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .vh-btns {
-  min-width: 122px;
+  width: 122px;
   min-height: 25px;
   border: 2px solid rgb(255, 255, 255);
   opacity: 0.541;
@@ -189,11 +194,12 @@ body {
 /* блок с датой */
 .vh-data {
   justify-content: center;
+  align-items: center;
   margin-bottom: 40px;
 }
 
 .vh-data__date {
-  min-width: 130px;
+  width: 170px;
   display: flex;
   justify-content: space-around;
   margin-bottom: 24px;
@@ -220,11 +226,15 @@ body {
 }
 
 .vh-data__date-list {
-  min-width: 170px;
+  /* width: 170px; */
 
   align-items: center;
   margin-bottom: 24px;
 }
+
+/* .vh-data__sun-list {
+  width: 170px;
+} */
 
 .vh-item__after {
   padding: 2px;
@@ -245,7 +255,7 @@ body {
   min-width: 84px;
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
 }
 
@@ -257,15 +267,16 @@ body {
 } */
 
 .vh-quote__text {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  margin-bottom: 18px;
   text-align: right;
   font-style: italic;
   line-height: 1.5;
 }
 
 .vh-quote__author {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   text-align: right;
   font-size: 18px;
@@ -274,12 +285,9 @@ body {
 
 /*TABLE*/
 @media (min-width: 768px) {
-  .wrapper {
-    width: 660px;
-  }
 
-  .container {
-    width: 490px;
+  .vh-container {
+    width: 608px;
   }
 
   .vh-bg {
@@ -288,7 +296,7 @@ body {
   }
 
   .vh-degree__temperatura {
-    min-width: 178px;
+    width: 178px;
     flex-direction: column;
   }
 
@@ -305,7 +313,7 @@ body {
   .vh-data__date,
   .vh-data__date-list,
   .vh-data__sun-list {
-    min-width: 294px;
+    width: 314px;
   }
 
   .vh-date__font,
@@ -330,7 +338,7 @@ body {
   }
 
   .vh-list {
-    justify-content: space-around;
+    justify-content: center;
   }
 
   .vh-quote__text {
@@ -339,27 +347,71 @@ body {
 }
 
 /* DESKTOP */
-@media (min-width: 960px) {
-  .wrapper {
-    width: 940px;
+@media (min-width: 1100px) {
+  .vh-container {
+    width: 1060px;
   }
 
+  .dk__start-content {
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .vh-degree {
+    width: 492px;
+    align-items: flex-end;
+
+  }
 
   .vh-bg {
+    margin: 0;
     min-height: 302px;
     margin-bottom: 30px;
+
+  }
+
+  .vh-button {
+    margin: 0;
+    margin-bottom: 48px;
+    width: 270px;
+  }
+
+  .bbb {
+
+    text-align: center;
   }
 
   .vh-div__desktop {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
-  .vh-desk {
+  .vh-data {
+    margin: 0;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+
+  .vh-data__date-list {
+    margin: 0;
+  }
+
+  .vh-data_time {
     display: flex;
     flex-wrap: nowrap;
   }
 
+  .vh-quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
 
+  .vh-quote__author {
+    margin: 0;
+    margin-left: auto;
+  }
 }
