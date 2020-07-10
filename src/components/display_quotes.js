@@ -1,6 +1,7 @@
 import quotes from './quotes_list';
 
-console.log(quotes.quotesCollection);
+export { randomQuote };
 
-let quoteTextOutput = document.querySelector('.vh-quote__text');
-let quoteAuthorOutput = document.querySelector('.vh-quote__author');
+let quotesArray = quotes.quotesCollection;
+
+let randomQuote = quotesArray[Math.floor(Math.random() * quotesArray.length)];
