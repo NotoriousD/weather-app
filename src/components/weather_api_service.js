@@ -13,7 +13,7 @@ export default {
   //   lat: '',
   //   lon: '',
   //   query: '',
-  query: 'Kyiv',
+  query: '',
   fetchCurrentWeatherByCoord() {
     const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}`;
     return fetch(baseUrl + curentWeather + requestParams)
@@ -30,9 +30,6 @@ export default {
     const requestParams = `q=${this.query}&appid=${key}`;
     return fetch(baseUrl + curentWeather + requestParams)
       .then(response => response.json())
-      .then(weather => {
-        console.log(weather);
-      })
       .catch(error => {
         console.log(error);
       });

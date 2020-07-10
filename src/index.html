@@ -30,13 +30,16 @@
             />
           </svg>
         </a>
-        <input
-          id="d_search"
-          type="text"
-          autocomplete="off"
-          class="d_search-box d_js-search-box"
-          placeholder="Enter the city"
-        />
+        <form class="d_search-form" id="search-form">
+          <input
+            id="d_search"
+            type="text"
+            name="query"
+            autocomplete="off"
+            class="d_search-box d_js-search-box"
+            placeholder="Enter the city"
+          />
+        </form>
         <a href="#" class="d_star-icon d_icon">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -53,61 +56,74 @@
       </div>
     </div>
     <!-- SLIDER FOR FAV CITY`S LIST -->
-    <div class="d_layout">
-      <div class="d_slider-item">
-        <a href="#" class="d_slider-link">Kyiv</a>
-        <a href="#" role="button" class="d_close-icon"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-            />
-            <path d="M0 0h24v24H0z" fill="none" />
-          </svg>
-        </a>
-      </div>
-      <div class="d_slider-item">
-        <a href="#" class="d_slider-link">Paris</a>
-        <a href="#" role="button" class="d_close-icon"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-            />
-            <path d="M0 0h24v24H0z" fill="none" />
-          </svg>
-        </a>
-      </div>
-      <div class="d_slider-item">
-        <a href="#" class="d_slider-link">London</a>
-        <a href="#" role="button" class="d_close-icon"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 0 24 24"
-            width="24"
-          >
-            <path
-              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-            />
-            <path d="M0 0h24v24H0z" fill="none" />
-          </svg>
-        </a>
+    <div class="container">
+      <div class="d_layout">
+        <div class="d_slider-item">
+          <a href="#" class="d_slider-link">Kyiv</a>
+          <a href="#" role="button" class="d_close-icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+          </a>
+        </div>
+        <div class="d_slider-item">
+          <a href="#" class="d_slider-link">Paris</a>
+          <a href="#" role="button" class="d_close-icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+          </a>
+        </div>
+        <div class="d_slider-item">
+          <a href="#" class="d_slider-link">London</a>
+          <a href="#" role="button" class="d_close-icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24"
+              viewBox="0 0 24 24"
+              width="24"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
-
     <div id="root"></div>
-    <!-- CONECT jOUERY -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <!-- CONECT SLIDER SLICK -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://kenwheeler.github.io/slick/slick/slick-theme.css"
+    /> -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+   
     <script type="text/javascript" src="components/slick.min.js"></script>
+    -->
   </body>
 </html>
