@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dinosaur weather</title>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
@@ -14,55 +14,158 @@
       rel="stylesheet"
       href="http://kenwheeler.github.io/slick/slick/slick-theme.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <!-- Don't forget to delete this style tag. -->
     <style></style>
   </head>
 
   <body>
-    <section>
-      <div class="pm_section">
-        <div class="pm_weather">
-          <h2 class="js-heading"></h2>
-          <ul class="pm_days js-five-days"></ul>
-          <div class="pm_info_btn_container_mobile">
-            <div class="pm_img_contaner">
-              <span class="pm_js_prev_mobile">&lt;</span>
-            </div>
-            <div class="pm_img_contaner">
-              <span class="pm_js_next_mobile">&gt;</span>
-            </div>
-          </div>
 
-          <div class="pm_more_info_block">
-            <div class="pm_close_btn_container">
-              <div class="pm_js_close_btn"><span>&#10060;</span></div>
-            </div>
 
-            <ul class="pm_5day_more_info"></ul>
-            <div class="pm_info_btn_container">
+
+    <div class="content">
+      <div class="d_container">
+         <div class="d_input-container">
+           <a href="#" class="d_location-icon d_icon js-location">
+             <svg
+               xmlns="http://www.w3.org/2000/svg"
+               height="24"
+               viewBox="0 0 24 24"
+               width="24"
+             >
+               <path d="M0 0h24v24H0z" fill="none" />
+               <path
+                 d="M20.94 11c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+               />
+             </svg>
+           </a>
+           <form class="d_search-form" id="search-form">
+             <input
+               id="d_search"
+               type="text"
+               name="query"
+               autocomplete="off"
+               class="d_search-box d_js-search-box"
+               placeholder="Enter the city"
+             />
+           </form>
+           <a href="#" class="d_star-icon d_icon">
+             <svg
+               xmlns="http://www.w3.org/2000/svg"
+               height="24"
+               viewBox="0 0 24 24"
+               width="24"
+             >
+               <path
+                 d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+               />
+               <path d="M0 0h24v24H0z" fill="none" />
+             </svg>
+           </a>
+         </div>
+       </div>
+        <div class="container">
+         <div class="d_layout">
+           <div class="d_slider-item">
+             <a href="#" class="d_slider-link">Kyiv</a>
+             <a href="#" role="button" class="d_close-icon"
+               ><svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 width="24"
+               >
+                 <path
+                   d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                 />
+                 <path d="M0 0h24v24H0z" fill="none" />
+               </svg>
+             </a>
+           </div>
+           <div class="d_slider-item">
+             <a href="#" class="d_slider-link">Paris</a>
+             <a href="#" role="button" class="d_close-icon"
+               ><svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 width="24"
+               >
+                 <path
+                   d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                 />
+                 <path d="M0 0h24v24H0z" fill="none" />
+               </svg>
+             </a>
+           </div>
+           <div class="d_slider-item">
+             <a href="#" class="d_slider-link">London</a>
+             <a href="#" role="button" class="d_close-icon"
+               ><svg
+                 xmlns="http://www.w3.org/2000/svg"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 width="24"
+               >
+                 <path
+                   d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                 />
+                 <path d="M0 0h24v24H0z" fill="none" />
+               </svg>
+             </a>
+           </div>
+         </div>
+       </div>
+       <div id="root">
+         <div class="dk__start-content vh-container">
+         <div class="dk__start-content">
+         </div>
+       </div>
+
+    
+       <section>
+        <div class="pm_section">
+          <div class="pm_weather">
+            <h2 class="js-heading"></h2>
+            <ul class="pm_days js-five-days"></ul>
+            <div class="pm_info_btn_container_mobile">
               <div class="pm_img_contaner">
-                <span class="pm_js_prev">&lt;</span>
+                <span class="pm_js_prev_mobile">&lt;</span>
               </div>
               <div class="pm_img_contaner">
-                <span class="pm_js_next">&gt;</span>
+                <span class="pm_js_next_mobile">&gt;</span>
+              </div>
+            </div>
+  
+            <div class="pm_more_info_block">
+              <div class="pm_close_btn_container">
+                <div class="pm_js_close_btn"><span>&#10060;</span></div>
+              </div>
+  
+              <ul class="pm_5day_more_info"></ul>
+              <div class="pm_info_btn_container">
+                <div class="pm_img_contaner">
+                  <span class="pm_js_prev">&lt;</span>
+                </div>
+                <div class="pm_img_contaner">
+                  <span class="pm_js_next">&gt;</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="pm_show_charts_container js_btn_chart">
-        <div class="show-charts">Show Chart</div>
-        <div class="pm_img_contaner">
-          <span class="pm_img_chart_direction">+</span>
+        <div class="pm_show_charts_container js_btn_chart">
+          <div class="show-charts">Show Chart</div>
+          <div class="pm_img_contaner">
+            <span class="pm_img_chart_direction">+</span>
+          </div>
         </div>
-      </div>
-      <div class="pm_chart_container pm_is_hidden">
-        <canvas id="myChart" width="auto"></canvas>
-      </div>
-    </section>
-
+        <div class="pm_chart_container pm_is_hidden">
+          <canvas id="myChart" width="auto"></canvas>
+        </div>
+      </section>
+  
     <script></script>
   </body>
 </html>
