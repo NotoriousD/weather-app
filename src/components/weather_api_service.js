@@ -47,7 +47,6 @@ export default {
     const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}&units=metric`;
     return fetch(baseUrl + forcast + requestParams)
       .then(response => response.json())
-
       .catch(error => {
         console.log(error);
       });

@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dinosaur weather</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <style></style>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Dinosaur weather</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- style -->
+</head>
 
-  <body>
-    <!-- INPUT FOR SEARCHING CITY -->
-    <div class="d_container">
+<body>
+
+  <div class="content">
+   <div class="d_container">
       <div class="d_input-container">
         <a href="#" class="d_location-icon d_icon js-location">
           <svg
@@ -55,8 +54,7 @@
         </a>
       </div>
     </div>
-    <!-- SLIDER FOR FAV CITY`S LIST -->
-    <div class="container">
+     <div class="container">
       <div class="d_layout">
         <div class="d_slider-item">
           <a href="#" class="d_slider-link">Kyiv</a>
@@ -108,9 +106,38 @@
         </div>
       </div>
     </div>
-    <div class="content">
-      <!-- блок с погодой -->
-      <div id="root"><div class="dk__start-content"></div></div>
+    <div id="root">
+      <div class="dk__start-content vh-container">
+      <div class="dk__start-content">
+        <section class="pm_section">
+          <div class="pm_weather">
+            <!-- <h2 class="js-heading"></h2> -->
+            <ul
+              class="pm_days js-five-days"
+              style="
+                transform: translateX(-84px) translateX(-84px) translateX(84px)
+                  translateX(84px);
+                transition-duration: 500ms;
+              "
+            ></ul>
+    
+            <button class="FiveDaysSmall__navBtn pm_is_hidden">
+              <span class="FiveDaysSmall__navBtn--left"> &lt;</span>
+            </button>
+            <button class="FiveDaysSmall__navBtn pm_is_hidden">
+              <span class="FiveDaysSmall__navBtn--right"> &gt;</span>
+            </button>
+    
+            <ul class="pm_5day_more_info"></ul>
+          </div>
+        </section>
+    
+        <div class="show-charts">Show Chart</div>
+    
+        <div class="pm_chart_container pm_is_hidden">
+          <canvas id="myChart" width="auto"></canvas>
+        </div>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <link
