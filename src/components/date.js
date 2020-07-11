@@ -1,13 +1,15 @@
-import moment from 'moment'
-import imgSunrise from '../images/sunrise.svg'
-import imgSunset from '../images/sunset.svg'
+import moment from 'moment';
+import imgSunrise from '../images/sunrise.svg';
+import imgSunset from '../images/sunset.svg';
+import { randomQuote } from './display_quotes';
 
-export const layoutDate = (data) => (
+export const layoutDate = data =>
   `
-  
-        <div class="vh-degree vh-bg">
-        <div class="bbb"> 
-            <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}"
+    <div class="vh-oneday__container">
+        <div class="vh-degree container vh-bg">
+            <img src="http://openweathermap.org/img/wn/${
+              data.weather[0].icon
+            }@2x.png" alt="${data.weather[0].description}"
                 width="42" class="vh-degree__img">
             <p class="vh-degree__country">${data.name}, ${data.sys.country}</p>
             <div class="vh-degree__temperatura">
@@ -57,11 +59,9 @@ export const layoutDate = (data) => (
             </ul>
             </div>
         </div>
-        <div class="vh-quote vh-div">
-          <p class="vh-quote__text">Who cares about the clouds whn we're together? Just sing a song and bring the sunny
-            weather.</p>
-          <p class="vh-quote__author">Dale Evans</p>
+        <div class="vh-quote container">
+          <p class="vh-quote__text">${randomQuote.quote}</p>
+          <p class="vh-quote__author">${randomQuote.author}</p>
         </div>
     </div>
-    `
-)
+    `;

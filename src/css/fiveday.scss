@@ -1,0 +1,412 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.pm_section {
+  width: auto;
+
+  border-radius: 35px;
+  filter: drop-shadow(0px 8px 21.5px rgba(16, 33, 54, 0.59));
+  background-color: #102136;
+}
+
+.pm_weather {
+  text-align: center;
+  padding: 30px 20px 15px;
+  overflow: hidden;
+}
+
+.js-heading {
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  font-family: 'Lato';
+  font-style: normal;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+.pm_days {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  /* flex-wrap: wrap; */
+  margin: 0;
+  list-style: none;
+}
+
+
+.pm_info_item {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+// .pm_info_item:not(:last-child) {
+//   margin-right: 50px;
+// }
+
+
+.pm_day_week {
+  margin-bottom: 8px;
+  pointer-events: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.54);
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 22px;
+}
+
+.pm_day_month {
+  margin-bottom: 2px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.pm_img_5days {
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+// ------------
+.pm_min_max_label {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.54);
+}
+
+.pm_min_max_label::after {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.2;
+  position: absolute;
+  width: 1px;
+  height: 30px;
+  top: 40%;
+  left: 49%;
+}
+
+.pm_min_max_item {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 7px;
+  font-size: 25px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: #ff6b08;
+}
+
+.pm_min_max_item span {
+  padding-top: 4px;
+  margin-left: 6px;
+}
+
+
+.pm_more_info {
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 4px;
+  outline: none;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 22px;
+}
+
+.FiveDaysSmall__navBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  margin: 0px 13px;
+  outline: none;
+  border-radius: 50%;
+}
+
+
+// @media (min-width: 768px) {
+//   .js-heading {
+//     color: #fff;
+//     font-size: 28px;
+//     font-weight: 700;
+//     text-align: center;
+//     margin-bottom: 25px;
+//   }
+
+//   .pm_weather {
+//     height: 260px;
+//     padding: 43px 0px 45px;
+//   }
+
+//   .pm_info_item {
+//     width: 80px;
+//   }
+
+//   .pm_day_week {
+//     font-size: 14px;
+//   }
+
+//   .pm_day_month {
+//     font-size: 18px;
+//   }
+
+//   .pm_min_max_label {
+//     width: 78px;
+//     font-size: 14px
+//   }
+
+//   .pm_min_max_item {
+//     width: 78px;
+//     font-size: 18px;
+//   }
+
+//   .pm_more_info {
+//     font-size: 14px;
+//   }
+
+// }
+
+// @media (max-width: 768px) {
+//   .js-heading {
+//     display: none;
+//   }
+
+//   .pm_days {
+//     margin: 0 auto;
+//     width: 536px;
+//     justify-content: space-between;
+//   }
+
+// }
+
+// -------------------------------------------------------
+
+.pm_card_container {
+  width: 120px;
+  height: 220px;
+  border-radius: 25px;
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.pm_temp {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: #ff6b08;
+  font-weight: 700;
+  font-family: "Lato";
+  text-align: center;
+}
+
+.pm_temp:first-child {
+  border-right: 1px solid #9da3ab;
+}
+
+.pm_temp span {
+  padding: 0;
+  font-size: 12px;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: #9da3ab;
+  font-weight: 400;
+  font-family: "Lato";
+}
+
+
+
+.pm_info_item:hover .pm_more_info {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.pm_more_info:active {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.pm_info_item:hover .pm_day_week {
+  color: #ff6b08;
+}
+
+.pm_day_week:active {
+  color: #ff6b08;
+}
+
+
+/* --------------------------------------------------- */
+.pm_5day_more_info {
+  padding: 0;
+  margin: 0;
+  display: none;
+  width: 100%;
+  padding-top: 30px;
+  margin: auto;
+  overflow-x: scroll;
+  justify-content: center;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.pm_is_active {
+  display: flex;
+}
+
+.pm_is_hidden {
+  display: none;
+}
+
+.pm_card_date {
+  padding-top: 22px;
+  font-size: 12px;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Lato";
+  text-align: center;
+}
+
+.pm_card_icon {
+  margin: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.pm_card_tmp {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: #ff6b08;
+  font-weight: 700;
+  font-family: "Lato";
+}
+
+.pm_card_grd_lvl {
+  padding-top: 14px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: #9198a0;
+  font-weight: 400;
+  font-family: "Lato";
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.pm_card_grd_lvl img {
+  margin-right: 10px;
+}
+
+.pm_card_hum {
+  padding-top: 6px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: #9198a0;
+  font-weight: 400;
+  font-family: "Lato";
+  margin-left: 19px;
+  display: flex;
+  align-items: center;
+}
+
+.pm_card_hum img {
+  margin-right: 16px;
+}
+
+.pm_card_wind {
+  padding-top: 6px;
+  font-size: 14px;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: #9198a0;
+  font-weight: 400;
+  font-family: "Lato";
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.pm_card_wind img {
+  margin-right: 9px;
+}
+
+// ------------------
+
+// .pm_chart {
+//   background-color: #102136;
+// }
+
+#myChart {
+  background-color: #102136;
+  margin: 0;
+  padding: 0;
+  width: auto;
+
+  border-radius: 35px;
+  filter: drop-shadow(0px 8px 21.5px rgba(16, 33, 54, 0.59));
+  height: 200px;
+}
+
+.pm_close_btn {
+  width: 22px;
+  height: 22px;
+  display: block;
+  position: relative;
+  z-index: 100;
+  top: -30px;
+}
+
+.pm_chart_container {
+  padding-top: 15px;
+
+}
+
+.show-charts {
+  cursor: pointer;
+  margin: auto;
+  font-size: 15px;
+  letter-spacing: 0px;
+  line-height: 22px;
+  color: #ff6b08;
+  font-weight: 400;
+  font-family: "Lato";
+  text-align: center;
+}
