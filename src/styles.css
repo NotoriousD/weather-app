@@ -19,12 +19,10 @@ body {
   margin: 0 !important;
   max-width: 100%;
   width: 100%;
-  min-height: 100vh;
-  font-size: 14px;
+  background-image: url(./images/Kyiv.png);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  color: #ffffff;
+  margin: 0 auto;
 }
 
 .vh-list {
@@ -319,7 +317,6 @@ body {
   .vh-date__font,
   .vh-temperatura-now {
     font-size: 90px;
-
   }
 
   .vh-data__date-number::after {
@@ -352,7 +349,6 @@ body {
     width: 1060px;
   }
   .dk__start-content {
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -363,7 +359,6 @@ body {
     align-items: flex-end;
 
   }
-
   .vh-bg {
     margin: 0;
     min-height: 302px;
