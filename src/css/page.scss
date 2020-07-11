@@ -1,5 +1,21 @@
-.content{
-    width: 100%;
-    min-height: inherit;
-    background-color: rgba(0, 0, 0, .5);
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+.content {
+  width: 100%;
+  min-height: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
 }
