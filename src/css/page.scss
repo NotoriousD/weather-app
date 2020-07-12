@@ -2,6 +2,9 @@
 html {
   box-sizing: border-box;
 }
+*{
+  outline: none;
+}
 *,
 *::before,
 *::after {
@@ -42,6 +45,16 @@ html {
 
 #root{
   position: relative;
+  padding-top: 100px;
+}
+
+.inner{
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.d_search-form{
+  padding-left: 15px;
+  display: flex;
 }
 
 

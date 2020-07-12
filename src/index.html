@@ -12,74 +12,76 @@
 </head>
 
 <body>
-  <section class="d_main-screen">
-    <!-- INPUT FOR SEARCHING CITY -->
-    <div class="d_container">
-      <div class="d_input-container">
-        <form class="d_search-form" id="search-form" type="submit">
-          <a href="#" class="d_location-icon d_icon js-location">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24"
-              viewBox="0 0 24 24"
-              width="24"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path
-                d="M20.94 11c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+    <div class="inner">
+      <section class="d_main-screen">
+        <!-- INPUT FOR SEARCHING CITY -->
+        <div class="d_container">
+          <div class="d_input-container">
+            <form class="d_search-form" id="search-form" type="submit">
+              <a href="#" class="d_location-icon d_icon js-location">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                >
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M20.94 11c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+                  />
+                </svg>
+              </a>
+    
+              <input
+                id="d_search"
+                type="text"
+                name="query"
+                autocomplete="off"
+                class="d_search-box"
+                placeholder="Enter the city"
               />
-            </svg>
-          </a>
-
-          <input
-            id="d_search"
-            type="text"
-            name="query"
-            autocomplete="off"
-            class="d_search-box"
-            placeholder="Enter the city"
-          />
-          <button class="d_star-icon" type="submit"></button>
-        </form>
-      </div>
-    </div>
-    <div class="d_slider-container">
-      <div class="d_siema"></div>
-      <button class="d_right-btn"></button>
-    </div>
-  </section>
-    <div id="root">
-      <div class="dk__start-content vh-container">
-        <div class="dk-current-day"></div>
-        <div class="dk-five-days">
-          <section class="pm_section">
-            <div class="pm_weather">
-              <!-- <h2 class="js-heading"></h2> -->
-              <ul
-                class="pm_days js-five-days"
-                style="
-                  transform: translateX(-84px) translateX(-84px) translateX(84px)
-                    translateX(84px);
-                  transition-duration: 500ms;
-                "
-              ></ul>
-      
-              <button class="FiveDaysSmall__navBtn pm_is_hidden">
-                <span class="FiveDaysSmall__navBtn--left"> &lt;</span>
-              </button>
-              <button class="FiveDaysSmall__navBtn pm_is_hidden">
-                <span class="FiveDaysSmall__navBtn--right"> &gt;</span>
-              </button>
-      
-              <ul class="pm_5day_more_info"></ul>
-            </div>
-          </section>
-      
-          <div class="show-charts">Show Chart</div>
-      
-          <div class="pm_chart_container pm_is_hidden">
-            <canvas id="myChart" width="auto"></canvas>
+              <button class="d_star-icon" type="submit"></button>
+            </form>
           </div>
+        </div>
+        <div class="d_slider-container">
+          <div class="d_siema"></div>
+          <button class="d_right-btn"></button>
+        </div>
+      </section>
+        <div id="root">
+          <div class="dk__start-content vh-container">
+            <div class="dk-current-day"></div>
+            <div class="dk-five-days">
+              <section class="pm_section">
+                <div class="pm_weather">
+                  <!-- <h2 class="js-heading"></h2> -->
+                  <ul
+                    class="pm_days js-five-days"
+                    style="
+                      transform: translateX(-84px) translateX(-84px) translateX(84px)
+                        translateX(84px);
+                      transition-duration: 500ms;
+                    "
+                  ></ul>
+          
+                  <button class="FiveDaysSmall__navBtn pm_is_hidden">
+                    <span class="FiveDaysSmall__navBtn--left"> &lt;</span>
+                  </button>
+                  <button class="FiveDaysSmall__navBtn pm_is_hidden">
+                    <span class="FiveDaysSmall__navBtn--right"> &gt;</span>
+                  </button>
+          
+                  <ul class="pm_5day_more_info"></ul>
+                </div>
+              </section>
+          
+              <div class="show-charts">Show Chart</div>
+          
+              <div class="pm_chart_container pm_is_hidden">
+                <canvas id="myChart" width="auto"></canvas>
+              </div>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

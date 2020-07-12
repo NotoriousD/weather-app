@@ -17,8 +17,8 @@ import {
   queryLayoutOneDay,
   startOneDayLayout,
 } from './components/rendering_degree';
-import PNotify from '../node_modules/@pnotify/core/dist/PNotify';
-import '../node_modules/@pnotify/core/dist/BrightTheme.css';
+/* import PNotify from '../node_modules/@pnotify/core/dist/PNotify';
+import '../node_modules/@pnotify/core/dist/BrightTheme.css'; */
 
 let store = {
   state: 'One',
@@ -31,18 +31,18 @@ form.addEventListener('submit', submitForm);
 
 function submitForm(event) {
   event.preventDefault();
-  if (input.value === '') {
+  /* if (input.value === '') {
     PNotify.error({
       title: 'NOTICE!',
       text: 'Please write search city!',
     });
-  }
-  if (store.state === '')
-    pixabayApi.fetchPictures().then(images => {
-      const number = getRandomInt(3);
-      document.body.style.backgroundImage = `url(${images.hits[number].largeImageURL})`;
-    });
+  } */
+  pixabayApi.fetchPictures().then(images => {
+    const number = getRandomInt(3);
+    document.body.style.backgroundImage = `url(${images.hits[number].largeImageURL})`;
+  });
   queryLayoutOneDay(input.value);
+    
 }
 
 startOneDayLayout();

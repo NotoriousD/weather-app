@@ -1,6 +1,4 @@
 'use strict';
-import './styles.css';
-import favoriteItem from './templates/favListItem.hbs';
 import Siema from 'siema';
 
 const refs = {
@@ -27,11 +25,10 @@ if (citiesFromStorage === null) {
   const allItems = citiesFromStorage
     .map(
       city => `<div id=${city} class="d_btn-container"><span class="d_added-city">${city}</span><button class="d_close-btn"
-  data-id=${city}></button>
-</div>`,
+        data-id=${city}></button>
+      </div>`,
     )
     .join('');
-
   refs.cityContainer.innerHTML = allItems;
 }
 
