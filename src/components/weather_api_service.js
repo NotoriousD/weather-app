@@ -13,7 +13,7 @@ export default {
   //   lat: '',
   //   lon: '',
   //   query: '',
-  query: 'Kyiv',
+  query: '',
   fetchCurrentWeatherByCoord(lat, lon) {
     const requestParams = `lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
     return fetch(baseUrl + curentWeather + requestParams)
@@ -24,11 +24,10 @@ export default {
       });
   },
 
-  fetchCurrentWeatherByCity() {
-    const requestParams = `q=${this.query}&appid=${key}&units=metric`;
+  fetchCurrentWeatherByCity(city) {
+    const requestParams = `q=${city}&appid=${key}&units=metric`;
     return fetch(baseUrl + curentWeather + requestParams)
       .then(response => response.json())
-
       .catch(error => {
         console.log(error);
       });

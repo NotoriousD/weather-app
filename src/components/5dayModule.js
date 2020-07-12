@@ -32,14 +32,15 @@ weatherApi.fetchWeatherForecastByCoord().then(data => {
 
   const infoBtn = document.querySelectorAll('#pm_infoBtn');
   const daysOfWeek = document.querySelectorAll('.pm_day_month');
-
+  const infoBlock = document.querySelector('.pm_more_info_block');
 
   for (let i = 0; i < infoBtn.length; i++) {
     infoBtn[i].addEventListener("click", (event) => {
-      console.log(event.target)
       moreInfo.innerHTML = '';
-      moreInfo.innerHTML = '<button class="pm_close_btn">&#215;</button>'
-      moreInfo.classList.add('pm_is_active')
+
+      infoBlock.classList.add('pm_is_active')
+
+
 
 
       list.forEach(item => {
@@ -66,9 +67,10 @@ weatherApi.fetchWeatherForecastByCoord().then(data => {
                             </li>`
           )
         }
+        scroll()
       })
-      document.querySelector('.pm_close_btn').addEventListener('click', () => {
-        moreInfo.classList.remove('pm_is_active')
+      document.querySelector('.pm_js_close_btn').addEventListener('click', () => {
+        infoBlock.classList.remove('pm_is_active')
       })
 
     })
@@ -97,15 +99,15 @@ function getDayNumber(number) {
   return day;
 }
 
-const prevArrow = document.querySelector('.FiveDaysSmall__navBtn--left');
-const nextArrow = document.querySelector('.FiveDaysSmall__navBtn--right');
+const prevArrow = document.querySelector('.pm_js_prev');
+const nextArrow = document.querySelector('.pm_js_next');
 let currentStep = 0;
 
-nextArrow.addEventListener('click', handlerNextHour);
-prevArrow.addEventListener('click', handlerPrevHour);
+/* nextArrow.addEventListener('click', handlerNextHour);
+prevArrow.addEventListener('click', handlerPrevHour); */
 
 function handlerNextHour(event) {
-  if (currentStep >= 2) {
+  if (currentStep >= 4) {
     return
   }
   currentStep++;
@@ -121,11 +123,57 @@ function handlerPrevHour(event) {
 }
 
 function setPositionRight() {
-  daysContainer.style.transform += `translateX(-84px)`;
-  daysContainer.style.transitionDuration = '500ms';
+  moreInfo.style.transform += `translateX(-140px)`;
+  moreInfo.style.transitionDuration = '500ms';
 }
 
 function setPositionLeft() {
-  daysContainer.style.transform += `translateX(84px)`;
-  daysContainer.style.transitionDuration = '500ms';
+  moreInfo.style.transform += `translateX(140px)`;
+  moreInfo.style.transitionDuration = '500ms';
+}
+// -------------------------------------------
+// Для мобильной версии
+
+
+const fivedays = document.querySelector('.pm_days')
+const prevArrowm = document.querySelector('.pm_js_prev_mobile');
+const nextArrowm = document.querySelector('.pm_js_next_mobile');
+let currentStepm = 0;
+/* 
+nextArrowm.addEventListener('click', handlerNextHourm);
+prevArrowm.addEventListener('click', handlerPrevHourm); */
+
+function handlerNextHourm(event) {
+  if (currentStep >= 3) {
+    return
+  }
+  currentStep++;
+  setPositionRightm();
+}
+
+function handlerPrevHourm(event) {
+  if (currentStep <= 0) {
+    return
+  }
+  currentStep--;
+  setPositionLeftm();
+}
+
+function setPositionRightm() {
+  fivedays.style.transform += `translateX(-70px)`;
+  fivedays.style.transitionDuration = '500ms';
+}
+
+function setPositionLeftm() {
+  fivedays.style.transform += `translateX(70px)`;
+  fivedays.style.transitionDuration = '500ms';
+}
+
+
+
+function scroll() {
+  window.scrollTo({
+    top: window.innerHeight + window.scrollY,
+    behavior: 'smooth',
+  });
 }
