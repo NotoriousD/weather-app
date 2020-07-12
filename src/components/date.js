@@ -6,7 +6,7 @@ import { randomQuote } from './display_quotes';
 export const layoutDate = data =>
   `
     <div class="vh-oneday__container">
-        <div class="vh-degree container vh-bg">
+        <div class="vh-degree vh-bg">
             <img src="http://openweathermap.org/img/wn/${
               data.weather[0].icon
             }@2x.png" alt="${data.weather[0].description}"
@@ -25,11 +25,13 @@ export const layoutDate = data =>
                     </li>
                 </ul>
             </div>
-            </div>
         </div>
-    <div class="vh-button">
-        <button class="vh-btns__today vh-btns">TODAY</button>
-        <button class="vh-btns__fivedays vh-btns">5 DAYS</button>
+    </div>
+    <div class="vh-button__container">
+        <div class='vh-button'>
+            <button class="vh-btns__today vh-btns">TODAY</button>
+            <button class="vh-btns__fivedays vh-btns">5 DAYS</button>
+        </div>
     </div>
     <div class="vh-div__desktop">
         <div class="vh-data vh-bg vh-data__bg">
@@ -59,7 +61,7 @@ export const layoutDate = data =>
             </ul>
             </div>
         </div>
-        <div class="vh-quote container">
+        <div class="vh-quote">
           <p class="vh-quote__text">${randomQuote.quote}</p>
           <p class="vh-quote__author">${randomQuote.author}</p>
         </div>

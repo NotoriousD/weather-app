@@ -3,16 +3,26 @@ import {
   layoutDate
 } from './date'
 
-const startScreenContainer = document.querySelector('.dk__start-content');
+const startScreenContainer = document.querySelector('.dk-current-day');
 
-navigator.geolocation.getCurrentPosition(function (pos) {
-  weatherFetch.fetchCurrentWeatherByCoord(pos.coords.latitude, pos.coords.longitude)
+export const queryLayoutOneDay = city => {
+  weatherFetch.fetchCurrentWeatherByCity(city)
   .then(weather => {
-    console.log('weather',weather);
     const info = buildInfoMarkup(weather);
-    insertListItem(info); //вызываем ф-цию для отрисовки
+    startScreenContainer.innerHTML = '';
+    insertListItem(info);
   });
-});
+}
+
+export const startOneDayLayout = () => {
+  navigator.geolocation.getCurrentPosition(function (pos) {
+    weatherFetch.fetchCurrentWeatherByCoord(pos.coords.latitude, pos.coords.longitude)
+    .then(weather => {
+      const info = buildInfoMarkup(weather);
+      insertListItem(info); //вызываем ф-цию для отрисовки
+    });
+  });
+}
 
 function buildInfoMarkup(item) {
   return layoutDate(item)

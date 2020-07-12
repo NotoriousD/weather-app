@@ -103,8 +103,8 @@ const prevArrow = document.querySelector('.pm_js_prev');
 const nextArrow = document.querySelector('.pm_js_next');
 let currentStep = 0;
 
-nextArrow.addEventListener('click', handlerNextHour);
-prevArrow.addEventListener('click', handlerPrevHour);
+/* nextArrow.addEventListener('click', handlerNextHour);
+prevArrow.addEventListener('click', handlerPrevHour); */
 
 function handlerNextHour(event) {
   if (currentStep >= 4) {
@@ -139,9 +139,9 @@ const fivedays = document.querySelector('.pm_days')
 const prevArrowm = document.querySelector('.pm_js_prev_mobile');
 const nextArrowm = document.querySelector('.pm_js_next_mobile');
 let currentStepm = 0;
-
+/* 
 nextArrowm.addEventListener('click', handlerNextHourm);
-prevArrowm.addEventListener('click', handlerPrevHourm);
+prevArrowm.addEventListener('click', handlerPrevHourm); */
 
 function handlerNextHourm(event) {
   if (currentStep >= 3) {

@@ -1,78 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
-
-=======
->>>>>>> dev
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Dinosaur weather</title>
-<<<<<<< HEAD
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      href="http://kenwheeler.github.io/slick/slick/slick-theme.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
-
-  <!-- Don't forget to delete this style tag. -->
-  <style></style>
-=======
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
     rel="stylesheet" />
   <!-- style -->
->>>>>>> dev
 </head>
 
 <body>
-
-<<<<<<< HEAD
-  <section>
-    <div class="pm_section">
-      <div class="pm_weather">
-        <h2 class="js-heading"></h2>
-        <ul class="pm_days js-five-days"></ul>
-        <div class="pm_info_btn_container_mobile">
-          <div class="pm_img_contaner "><span class="pm_js_prev_mobile">&lt;</span></div>
-          <div class="pm_img_contaner"><span class=" pm_js_next_mobile">&gt;</span></div>
-        </div>
-
-        <div class="pm_more_info_block">
-          <div class="pm_close_btn_container">
-            <div class="pm_js_close_btn "><span>&#10060;</span></div>
-          </div>
-
-          <ul class="pm_5day_more_info"></ul>
-          <div class="pm_info_btn_container">
-            <div class="pm_img_contaner "><span class="pm_js_prev">&lt;</span></div>
-            <div class="pm_img_contaner"><span class=" pm_js_next">&gt;</span></div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-    <div class="pm_show_charts_container js_btn_chart">
-      <div class="show-charts">Show Chart</div>
-      <div class="pm_img_contaner"><span class="pm_img_chart_direction">+</span></div>
-    </div>
-    <div class="pm_chart_container pm_is_hidden">
-      <canvas id="myChart" width="auto"></canvas>
-    </div>
-
-  </section>
-
-  <script></script>
-</body>
-
-=======
   <div class="content">
    <div class="d_container">
       <div class="d_input-container">
@@ -94,7 +33,6 @@
             id="d_search"
             type="text"
             name="query"
-            autocomplete="off"
             class="d_search-box d_js-search-box"
             placeholder="Enter the city"
           />
@@ -168,52 +106,39 @@
     </div>
     <div id="root">
       <div class="dk__start-content vh-container">
-      <div class="dk__start-content">
-        <section class="pm_section">
-          <div class="pm_weather">
-            <!-- <h2 class="js-heading"></h2> -->
-            <ul
-              class="pm_days js-five-days"
-              style="
-                transform: translateX(-84px) translateX(-84px) translateX(84px)
-                  translateX(84px);
-                transition-duration: 500ms;
-              "
-            ></ul>
-    
-            <button class="FiveDaysSmall__navBtn pm_is_hidden">
-              <span class="FiveDaysSmall__navBtn--left"> &lt;</span>
-            </button>
-            <button class="FiveDaysSmall__navBtn pm_is_hidden">
-              <span class="FiveDaysSmall__navBtn--right"> &gt;</span>
-            </button>
-    
-            <ul class="pm_5day_more_info"></ul>
+        <div class="dk-current-day"></div>
+        <div class="dk-five-days">
+          <section class="pm_section">
+            <div class="pm_weather">
+              <!-- <h2 class="js-heading"></h2> -->
+              <ul
+                class="pm_days js-five-days"
+                style="
+                  transform: translateX(-84px) translateX(-84px) translateX(84px)
+                    translateX(84px);
+                  transition-duration: 500ms;
+                "
+              ></ul>
+      
+              <button class="FiveDaysSmall__navBtn pm_is_hidden">
+                <span class="FiveDaysSmall__navBtn--left"> &lt;</span>
+              </button>
+              <button class="FiveDaysSmall__navBtn pm_is_hidden">
+                <span class="FiveDaysSmall__navBtn--right"> &gt;</span>
+              </button>
+      
+              <ul class="pm_5day_more_info"></ul>
+            </div>
+          </section>
+      
+          <div class="show-charts">Show Chart</div>
+      
+          <div class="pm_chart_container pm_is_hidden">
+            <canvas id="myChart" width="auto"></canvas>
           </div>
-        </section>
-    
-        <div class="show-charts">Show Chart</div>
-    
-        <div class="pm_chart_container pm_is_hidden">
-          <canvas id="myChart" width="auto"></canvas>
         </div>
-      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      href="http://kenwheeler.github.io/slick/slick/slick-theme.css"
-    /> -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-   
-    <script type="text/javascript" src="components/slick.min.js"></script>
-    -->
   </body>
->>>>>>> dev
 </html>

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 /* * {
   outline: 1px solid red;
 } */
@@ -22,10 +19,12 @@ body {
   margin: 0 !important;
   max-width: 100%;
   width: 100%;
+  min-height: 100vh;
   background-image: url(./images/Kyiv.png);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
+  color: #ffffff;
 }
 
 .vh-list {
@@ -62,15 +61,22 @@ body {
   justify-content: center;
 }
 
+.vh-degree{
+  border-radius: 35px;
+}
+
+.vh-data{
+  border-radius: 35px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
 .vh-bg {
   margin: 0 auto;
   padding: 0;
-
-  min-height: 190px;
   margin-bottom: 32px;
-
-  background-color: rgb(16, 33, 54);
-  border-radius: 35px;
+  background-color: rgba(16, 33, 54, 0.6);
   box-shadow: 0px 8px 43px 0px rgba(16, 33, 54, 0.59);
 }
 
@@ -153,10 +159,6 @@ body {
   font-size: 18px;
 }
 
-.vh-data__bg {
-  opacity: 0.6;
-}
-
 /* стили для блока с кнопками */
 .vh-button {
   margin: 0 auto;
@@ -178,7 +180,7 @@ body {
   font-weight: 700;
   color: rgb(0, 0, 0);
 
-  transition: transform 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
 
 .vh-btns:hover,
@@ -188,8 +190,7 @@ body {
   background-color: rgb(247, 247, 247);
   opacity: 1;
   cursor: pointer;
-
-  transform: scale(1.03);
+  
 }
 
 /* блок с датой */
@@ -203,15 +204,16 @@ body {
   width: 170px;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
 }
 
 .vh-date__font {
   margin: 0;
   padding: 0;
   font-size: 45px;
-  line-height: 0.6;
+  line-height: 1;
   text-align: inherit;
+  font-weight: 300;
 }
 
 .vh-data__date-number {
@@ -238,9 +240,12 @@ body {
 } */
 
 .vh-item__after {
-  padding: 2px;
   padding-right: 10px;
   border-right: 1px solid rgba(231, 232, 235, 0.4);
+}
+
+.vh-sun__item p{
+  padding-left: 10px;
 }
 
 .vh-item__before {
@@ -292,7 +297,6 @@ body {
   }
 
   .vh-bg {
-    min-height: 276px;
     margin-bottom: 46px;
   }
 
@@ -314,8 +318,10 @@ body {
   .vh-data__date,
   .vh-data__date-list,
   .vh-data__sun-list {
-    width: 314px;
+    width: auto;
   }
+
+
 
   .vh-date__font,
   .vh-temperatura-now {
@@ -354,25 +360,38 @@ body {
   .dk__start-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    width: 100%;
   }
 
   .vh-degree {
     width: 492px;
-    align-items: flex-end;
+    align-items: center;
+    padding: 40px 0;
 
   }
   .vh-bg {
     margin: 0;
-    min-height: 302px;
     margin-bottom: 30px;
+  }
 
+  .vh-data{
+    padding: 69px;
+    padding-left: 100px;
+    padding-bottom: 100px;
   }
 
   .vh-button {
     margin: 0;
     margin-bottom: 48px;
-    width: 270px;
+    width: 498px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vh-button button{
+    margin: 0 8px;
   }
 
   .bbb {
@@ -383,27 +402,37 @@ body {
   .vh-div__desktop {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .vh-data {
     margin: 0;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-start;
+    position: relative;
+    left: 0;
   }
 
   .vh-data__date-list {
     margin: 0;
+    margin-right: 50px;
+  }
+
+  .vh-data__date-number{
+    margin-right: 40px;
   }
 
   .vh-data_time {
     display: flex;
     flex-wrap: nowrap;
+    align-items: flex-end;
   }
   .vh-quote {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-start;
+    max-width: 375px;
   }
 
   .vh-quote__author {
@@ -411,4 +440,3 @@ body {
     margin-left: auto;
   }
 }
->>>>>>> dev
