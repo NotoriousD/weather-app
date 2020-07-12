@@ -8,78 +8,70 @@ const forcast = 'forecast?';
 // api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
 
 export default {
-  lat: '50.461944599999995',
-  lon: '30.335979699999996',
+  lat: '50.4333',
+  lon: '30.5167',
   //   lat: '',
   //   lon: '',
   //   query: '',
-
   query: '',
-  fetchCurrentWeatherByCoord() {
-    const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}`;
+  fetchCurrentWeatherByCoord(lat, lon) {
+    const requestParams = `lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+    return fetch(baseUrl + curentWeather + requestParams)
+      .then(response => response.json())
 
-    query: 'Kyiv',
-      fetchCurrentWeatherByCoord(lat, lon) {
-        const requestParams = `lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+      .catch(error => {
+        console.log(error);
+      });
+  },
 
-        return fetch(baseUrl + curentWeather + requestParams)
-          .then(response => response.json())
+  fetchCurrentWeatherByCity(city) {
+    const requestParams = `q=${city}&appid=${key}&units=metric`;
+    return fetch(baseUrl + curentWeather + requestParams)
+      .then(response => response.json())
+      .catch(error => {
+        console.log(error);
+      });
+  },
 
-          .catch(error => {
-            console.log(error);
-          });
-      },
+  fetchWeatherForecastByCoord() {
+    const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}&units=metric`;
+    return fetch(baseUrl + forcast + requestParams)
+      .then(response => response.json())
+      .catch(error => {
+        console.log(error);
+      });
+  },
 
-      fetchCurrentWeatherByCity() {
-        const requestParams = `q=${this.query}&appid=${key}&units=metric`;
-        return fetch(baseUrl + curentWeather + requestParams)
-          .then(response => response.json())
+  fetchWeatherForecastByCity() {
+    const requestParams = `q=${this.query}&appid=${key}&units=metric`;
+    return fetch(baseUrl + forcast + requestParams)
+      .then(response => response.json())
 
-          .catch(error => {
-            console.log(error);
-          });
-      },
+      .catch(error => {
+        console.log(error);
+      });
+  },
 
-      fetchWeatherForecastByCoord() {
-        const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}&units=metric`;
-        return fetch(baseUrl + forcast + requestParams)
-          .then(response => response.json())
+  get searchQuerry() {
+    return this.query;
+  },
 
-          .catch(error => {
-            console.log(error);
-          });
-      },
+  set searchQuerry(string) {
+    this.query = string;
+  },
 
-      fetchWeatherForecastByCity() {
-        const requestParams = `q=${this.query}&appid=${key}&units=metric`;
-        return fetch(baseUrl + forcast + requestParams)
-          .then(response => response.json())
+  get cityLatitude() {
+    return this.lat;
+  },
 
-          .catch(error => {
-            console.log(error);
-          });
-      },
+  set cityLatitude(string) {
+    this.lat = string;
+  },
+  get cityLongitude() {
+    return this.lon;
+  },
 
-      get searchQuerry() {
-        return this.query;
-      },
-
-      set searchQuerry(string) {
-        this.query = string;
-      },
-
-      get cityLatitude() {
-        return this.lat;
-      },
-
-      set cityLatitude(string) {
-        this.lat = string;
-      },
-      get cityLongitude() {
-        return this.lon;
-      },
-
-      set cityLongitude(string) {
-        this.lon = string;
-      },
-  };
+  set cityLongitude(string) {
+    this.lon = string;
+  },
+};

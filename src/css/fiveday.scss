@@ -16,7 +16,7 @@ img {
   width: 1060px;
   border-radius: 35px;
   filter: drop-shadow(0px 8px 21.5px rgba(16, 33, 54, 0.59));
-  background-color: #102136;
+  background-color: rgba(16, 33, 54, 0.6);
   margin: auto;
 }
 
@@ -25,6 +25,7 @@ img {
     width: 600px;
   }
 }
+
 @media (max-width: 320px) {
   .pm_section {
     width: 280px;
@@ -54,12 +55,14 @@ img {
   line-height: 22px;
   display: none;
 }
+
 @media (max-width: 320px) {
   .js-heading {
     display: flex;
     justify-content: center;
   }
 }
+
 .pm_days {
   width: auto;
   display: flex;
@@ -68,6 +71,7 @@ img {
   justify-content: space-between;
   list-style: none;
 }
+
 @media (max-width: 320px) {
   .pm_days {
     width: 600px;
@@ -92,6 +96,7 @@ img {
     margin-right: 15px;
   }
 }
+
 @media (max-width: 320px) {
   .pm_info_item:not(:last-child) {
     margin-right: 20px;
@@ -214,13 +219,15 @@ img {
   flex-direction: column;
   cursor: pointer;
 }
+
 @media (max-width: 320px) {
   .pm_card_container {
     cursor: none;
   }
-  .pm_card_container:hover {
-  }
+
+  .pm_card_container:hover {}
 }
+
 .pm_card_container:not(:last-child) {
   margin-right: 10px;
 }
@@ -292,29 +299,34 @@ img {
   justify-content: center;
   overflow: hidden;
 }
+
 @media (max-width: 768px) {
   .pm_5day_more_info {
     width: 1060px;
     justify-content: stretch;
   }
 }
+
 @media (max-width: 320px) {
   .pm_5day_more_info {
     overflow: scroll;
   }
 }
+
 .pm_info_btn_container {
   display: none;
   padding-top: 10px;
   flex-direction: row;
   justify-content: center;
 }
+
 .pm_info_btn_container_mobile {
   display: none;
   padding-top: 10px;
   flex-direction: row;
   justify-content: center;
 }
+
 @media (max-width: 320px) {
   .pm_info_btn_container_mobile {
     display: flex;
@@ -324,6 +336,7 @@ img {
 .pm_info_btn_container_mobile div:not(:last-child) {
   margin-right: 10px;
 }
+
 .pm_close_btn_container {
   display: flex;
   padding-top: 10px;
@@ -337,6 +350,7 @@ img {
     display: flex;
   }
 }
+
 @media (max-width: 320px) {
   .pm_info_btn_container {
     display: none;
@@ -467,7 +481,7 @@ img {
 // }
 
 #myChart {
-  background-color: #102136;
+  background-color: rgba(16, 33, 54, 0.6);
   border-radius: 35px;
 }
 
@@ -497,6 +511,7 @@ img {
     width: 600px;
   }
 }
+
 @media (max-width: 320px) {
   .pm_chart_container {
     width: 280px;
@@ -538,6 +553,7 @@ img {
   justify-content: center;
   cursor: pointer;
 }
+
 .pm_img_contaner:hover {
   background-color: #213042;
   cursor: pointer;
