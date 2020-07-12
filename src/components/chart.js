@@ -3,10 +3,6 @@ import Chart from 'chart.js';
 
 import weatherApi from './weather_api_service';
 
-
-
-
-
 const myChart = document.querySelector(".pm_chart_container");
 
 weatherApi.fetchWeatherForecastByCoord().then(data => {
@@ -59,6 +55,8 @@ weatherApi.fetchWeatherForecastByCoord().then(data => {
       ]
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: false,
       scales: {
         yAxes: [{
           ticks: {
@@ -74,21 +72,30 @@ weatherApi.fetchWeatherForecastByCoord().then(data => {
 })
 
 
+function scroll() {
+  window.scrollTo({
+    top: window.innerHeight + window.scrollY,
+    behavior: 'smooth',
+  });
+}
+
+const direction = document.querySelector('.pm_img_chart_direction ')
 
 const showChart = document.querySelector('.show-charts')
 showChart.addEventListener('click', () => {
-
-  myChart.classList.toggle('pm_is_hidden')
-
+  if (myChart.classList.contains('pm_is_hidden')) {
+    myChart.classList.remove('pm_is_hidden')
+    direction.textContent = '-';
+    showChart.textContent = 'Close Chart'
+    scroll()
+  } else {
+    myChart.classList.add('pm_is_hidden')
+    direction.textContent = '';
+    direction.textContent = '+';
+    showChart.textContent = 'Show Chart'
+  }
 })
 
-
-function getWeekDay(number) {
-  const a = new Date(number * 1000);
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const dayOfWeek = days[a.getDay()]
-  return dayOfWeek
-}
 
 function getMonthDay(number) {
   const a = new Date(number * 1000);
@@ -98,10 +105,4 @@ function getMonthDay(number) {
   const year = a.getFullYear();
   const validFormat = `${day} ${month},${year}`;
   return validFormat;
-}
-
-function getDayNumber(number) {
-  const a = new Date(number * 1000);
-  const day = a.getDate();
-  return day;
 }
