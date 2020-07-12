@@ -439,7 +439,6 @@ body {
   overflow: hidden;
   padding-top: 39px;
   width: 100%;
-  height: 100vh;
 }
 /*--------------- STYLES FOR INPUT---------------------*/
 .d_container {
@@ -487,11 +486,11 @@ body {
   fill: #ff6b08;
 }
 .d_location-icon {
-  margin-left: 25px;
+  margin-left: 0px;
 }
 .d_star-icon {
   position: absolute;
-  right: 20px;
+  right: 0px;
   top: 50%;
   transform: translateY(-50%);
   background-image: url(./images/star_border.svg);
@@ -502,9 +501,9 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  margin-right: 25px;
-  border-color: rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
+  margin-right: 0px;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 /*--------------- STYLES FOR INPUT---------------------*/
