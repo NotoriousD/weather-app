@@ -58,8 +58,6 @@ body {
   justify-content: center;
 }
 
-<<<<<<< HEAD
-=======
 .vh-degree {
   border-radius: 35px;
 }
@@ -71,7 +69,6 @@ body {
   border-top-left-radius: 0;
 }
 
->>>>>>> dev
 .vh-bg {
   margin: 0 auto;
   padding: 0;
@@ -197,11 +194,6 @@ body {
   background-color: rgb(247, 247, 247);
   opacity: 1;
   cursor: pointer;
-<<<<<<< HEAD
-
-  transform: scale(1.03);
-=======
->>>>>>> dev
 }
 
 /* блок с датой */
@@ -255,13 +247,10 @@ body {
   border-right: 1px solid rgba(231, 232, 235, 0.4);
 }
 
-<<<<<<< HEAD
-=======
 .vh-sun__item p {
   padding-left: 10px;
 }
 
->>>>>>> dev
 .vh-item__before {
   padding-left: 10px;
 }
@@ -378,35 +367,24 @@ body {
 
   .vh-degree {
     width: 492px;
-<<<<<<< HEAD
-    align-items: flex-end;
-
-=======
     align-items: center;
     padding: 40px 0;
->>>>>>> dev
   }
 
   .vh-bg {
     margin: 0;
     min-height: 302px;
     margin-bottom: 30px;
-
-<<<<<<< HEAD
-=======
+  }
   .vh-data {
     padding: 69px;
     padding-left: 100px;
     padding-bottom: 100px;
->>>>>>> dev
   }
 
   .vh-button {
     margin: 0;
     margin-bottom: 48px;
-<<<<<<< HEAD
-    width: 270px;
-=======
     width: 498px;
     display: flex;
     justify-content: center;
@@ -415,7 +393,6 @@ body {
 
   .vh-button button {
     margin: 0 8px;
->>>>>>> dev
   }
 
   .bbb {
@@ -435,14 +412,11 @@ body {
 
   .vh-data__date-list {
     margin: 0;
-<<<<<<< HEAD
-=======
     margin-right: 50px;
   }
 
   .vh-data__date-number {
     margin-right: 40px;
->>>>>>> dev
   }
 
   .vh-data_time {

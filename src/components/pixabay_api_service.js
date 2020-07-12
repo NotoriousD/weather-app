@@ -5,12 +5,7 @@ const key = 'ef09053ba5c2f49c031def93624f1f41';
 const curentWeather = 'weather?';
 const forcast = 'forecast?';
 
-<<<<<<< HEAD
-const imageType =
-  '?image_type=photo&orientation=horizontal&category=science,places';
-=======
 // api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
->>>>>>> dev
 
 export default {
   lat: '50.4333',
