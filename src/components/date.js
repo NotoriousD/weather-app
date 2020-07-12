@@ -3,22 +3,12 @@ import imgSunrise from '../images/sunrise.svg';
 import imgSunset from '../images/sunset.svg';
 import { randomQuote } from './display_quotes';
 
-<<<<<<< HEAD
 export const layoutDate = (data) => (
   `
-  
         <div class="vh-degree vh-bg">
         <div class="bbb"> 
             <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png" alt="${data.weather[0].description}"
-=======
-export const layoutDate = data =>
-  `
-    <div class="vh-oneday__container">
-        <div class="vh-degree container vh-bg">
-            <img src="http://openweathermap.org/img/wn/${
-              data.weather[0].icon
-            }@2x.png" alt="${data.weather[0].description}"
->>>>>>> dev
+
                 width="42" class="vh-degree__img">
             <p class="vh-degree__country">${data.name}, ${data.sys.country}</p>
             <div class="vh-degree__temperatura">
@@ -43,17 +33,10 @@ export const layoutDate = data =>
     <div class="vh-div__desktop">
         <div class="vh-data vh-bg vh-data__bg">
             <div class="vh-data__date">
-<<<<<<< HEAD
+
                 <p class="vh-data__date-number vh-date__font">${moment.unix(data.dt).format('DD')}</p>
                 <p class="vh-data__date-day vh-date__font">${moment.unix(data.dt).format('ddd')}</p>
-=======
-                <p class="vh-data__date-number vh-date__font">${moment(
-                  data.dt,
-                ).format('DD')}</p>
-                <p class="vh-data__date-day vh-date__font">${moment(
-                  data.dt,
-                ).format('ddd')}</p>
->>>>>>> dev
+
             </div>
 <div class="vh-data_time">
             <ul class="vh-data__date-list vh-list">
@@ -68,13 +51,9 @@ export const layoutDate = data =>
             <ul class="vh-data__sun-list vh-list">
                 <li class="vh-sun__item ">
                     <img src="${imgSunrise}" alt="sunrise" width="25" height="33">
-<<<<<<< HEAD
+
                     <p class="vh-item__after">${moment.unix(data.sys.sunrise).format('hh:mm')}</p>
-=======
-                    <p class="vh-item__after">${moment(data.sys.sunrise).format(
-                      'hh:mm',
-                    )}</p>
->>>>>>> dev
+
                 </li>
                 <li class="vh-sun__item vh-item__before">
                     <img src="${imgSunset}" alt="sunrise" width="25" height="33">
@@ -83,20 +62,11 @@ export const layoutDate = data =>
             </ul>
             </div>
         </div>
-<<<<<<< HEAD
-        <div class="vh-quote vh-div">
-          <p class="vh-quote__text">Who cares about the clouds whn we're together? Just sing a song and bring the sunny
-            weather.</p>
-          <p class="vh-quote__author">Dale Evans</p>
-        </div>
-    </div>
-    `
-)
-=======
         <div class="vh-quote container">
           <p class="vh-quote__text">${randomQuote.quote}</p>
           <p class="vh-quote__author">${randomQuote.author}</p>
         </div>
     </div>
-    `;
->>>>>>> dev
+    `
+    );
+

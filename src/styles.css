@@ -351,7 +351,7 @@ body {
   .vh-container {
     width: 1060px;
   }
-<<<<<<< HEAD
+
 
   .dk__start-content {
 
@@ -366,8 +366,7 @@ body {
 
   }
 
-=======
->>>>>>> dev
+
   .vh-bg {
     margin: 0;
     min-height: 302px;
@@ -405,7 +404,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
   }
-<<<<<<< HEAD
+
 
   .vh-quote {
     display: flex;
@@ -418,6 +417,5 @@ body {
     margin: 0;
     margin-left: auto;
   }
-=======
->>>>>>> dev
+
 }
