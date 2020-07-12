@@ -47,7 +47,6 @@ body {
 }
 
 .bbb {
-
   text-align: center;
 }
 
@@ -59,6 +58,20 @@ body {
   justify-content: center;
 }
 
+<<<<<<< HEAD
+=======
+.vh-degree {
+  border-radius: 35px;
+}
+
+.vh-data {
+  border-radius: 35px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+>>>>>>> dev
 .vh-bg {
   margin: 0 auto;
   padding: 0;
@@ -132,7 +145,6 @@ body {
 }
 
 .vh-list__item-border {
-
   border-right: 1px solid rgba(255, 255, 255, 0.102);
 }
 
@@ -185,8 +197,11 @@ body {
   background-color: rgb(247, 247, 247);
   opacity: 1;
   cursor: pointer;
+<<<<<<< HEAD
 
   transform: scale(1.03);
+=======
+>>>>>>> dev
 }
 
 /* блок с датой */
@@ -240,6 +255,13 @@ body {
   border-right: 1px solid rgba(231, 232, 235, 0.4);
 }
 
+<<<<<<< HEAD
+=======
+.vh-sun__item p {
+  padding-left: 10px;
+}
+
+>>>>>>> dev
 .vh-item__before {
   padding-left: 10px;
 }
@@ -283,7 +305,6 @@ body {
 
 /*TABLE*/
 @media (min-width: 768px) {
-
   .vh-container {
     width: 608px;
   }
@@ -357,8 +378,13 @@ body {
 
   .vh-degree {
     width: 492px;
+<<<<<<< HEAD
     align-items: flex-end;
 
+=======
+    align-items: center;
+    padding: 40px 0;
+>>>>>>> dev
   }
 
   .vh-bg {
@@ -366,16 +392,33 @@ body {
     min-height: 302px;
     margin-bottom: 30px;
 
+<<<<<<< HEAD
+=======
+  .vh-data {
+    padding: 69px;
+    padding-left: 100px;
+    padding-bottom: 100px;
+>>>>>>> dev
   }
 
   .vh-button {
     margin: 0;
     margin-bottom: 48px;
+<<<<<<< HEAD
     width: 270px;
+=======
+    width: 498px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vh-button button {
+    margin: 0 8px;
+>>>>>>> dev
   }
 
   .bbb {
-
     text-align: center;
   }
 
@@ -392,6 +435,14 @@ body {
 
   .vh-data__date-list {
     margin: 0;
+<<<<<<< HEAD
+=======
+    margin-right: 50px;
+  }
+
+  .vh-data__date-number {
+    margin-right: 40px;
+>>>>>>> dev
   }
 
   .vh-data_time {
@@ -410,4 +461,130 @@ body {
     margin: 0;
     margin-left: auto;
   }
+}
+
+/* Daria`s styles */
+.d_main-screen {
+  min-width: 430px;
+  overflow: hidden;
+  padding-top: 39px;
+  width: 100%;
+}
+/*--------------- STYLES FOR INPUT---------------------*/
+.d_container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.d_input-container {
+  display: inline-block;
+  position: relative;
+  margin-top: 28px;
+  min-width: 280px;
+  border-width: 2px;
+  border-radius: 50px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  background-color: rgb(255, 255, 255);
+}
+.d_search-box {
+  background-color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50px;
+  width: 280px;
+  padding-left: 15px;
+  height: 48px;
+  font-size: 14px;
+  font-family: 'Lato';
+  color: rgb(0, 0, 0);
+  line-height: 1.571;
+}
+.d_icon {
+  display: inline-block;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.341;
+  width: 22px;
+  height: 22px;
+}
+.d_icon svg:focus,
+.d_icon svg:hover {
+  cursor: pointer;
+  fill: #ff6b08;
+}
+.d_location-icon {
+  margin-left: 0px;
+}
+.d_star-icon {
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: url(./images/star_border.svg);
+  fill: #7e8792;
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin-right: 0px;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+/*--------------- STYLES FOR INPUT---------------------*/
+.d_slider-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.d_siema {
+  width: 300px;
+  display: flex;
+  justify-content: flex-start;
+}
+.d_right-btn {
+  background-image: url(./images/chevron_right.svg);
+  width: 25px;
+  height: 25px;
+  background-color: #c5c9cd;
+  border: none;
+  border-radius: 25px;
+  opacity: 0.5;
+}
+.d_full-star {
+  fill: #7e8792;
+  background-image: url(./images/star.svg);
+}
+.d_btn-container {
+  background-color: #485b7d;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  width: intrinsic;
+  opacity: 0.6;
+  border-radius: 20px;
+}
+.d_added-city {
+  font-size: 12px;
+  font-family: 'Lato';
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  line-height: 1.833;
+  text-align: center;
+  cursor: pointer;
+  padding-left: 14px;
+  padding-bottom: 4px;
+}
+.d_close-btn {
+  fill: #acb5c4;
+  width: 25px;
+  height: 25px;
+  background-image: url(./images/close.svg);
+  background-position: center;
+  background-color: #485b7d;
+  border: none;
 }
