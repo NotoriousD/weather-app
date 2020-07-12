@@ -2,7 +2,7 @@ import './styles.css';
 import './css/fiveday.scss';
 import './media.css';
 import './css/page.scss';
-import './css/dariaK/inputAndSlider.scss';
+// import './css/dariaK/inputAndSlider.scss';
 import './components/5dayModule';
 import './components/5dayHeading';
 import './components/chart';
