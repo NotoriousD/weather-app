@@ -11,7 +11,7 @@ import './components/api';
 import './components/pixabay_api_service';
 import query from './components/weather_api_service';
 import './components/inputSearch';
-import favCityTemplate from './templates/favListItem.hbs';
+// import favCityTemplate from './templates/favListItem.hbs';
 import pixabayApi from './components/pixabay_api_service';
 import './components/rendering_degree';
 import './components/display_quotes';

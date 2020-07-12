@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Dinosaur weather</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-    rel="stylesheet" />
-  <!-- style -->
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dinosaur weather</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style -->
+  </head>
 
-<body>
+  <body>
     <div class="inner">
       <section class="d_main-screen">
         <!-- INPUT FOR SEARCHING CITY -->
@@ -31,7 +32,6 @@
                   />
                 </svg>
               </a>
-    
               <input
                 id="d_search"
                 type="text"
@@ -49,40 +49,41 @@
           <button class="d_right-btn"></button>
         </div>
       </section>
-        <div id="root">
-          <div class="dk__start-content vh-container">
-            <div class="dk-current-day"></div>
-            <div class="dk-five-days">
-              <section class="pm_section">
-                <div class="pm_weather">
-                  <!-- <h2 class="js-heading"></h2> -->
-                  <ul
-                    class="pm_days js-five-days"
-                    style="
-                      transform: translateX(-84px) translateX(-84px) translateX(84px)
-                        translateX(84px);
-                      transition-duration: 500ms;
-                    "
-                  ></ul>
-          
-                  <button class="FiveDaysSmall__navBtn pm_is_hidden">
-                    <span class="FiveDaysSmall__navBtn--left"> &lt;</span>
-                  </button>
-                  <button class="FiveDaysSmall__navBtn pm_is_hidden">
-                    <span class="FiveDaysSmall__navBtn--right"> &gt;</span>
-                  </button>
-          
-                  <ul class="pm_5day_more_info"></ul>
-                </div>
-              </section>
-          
-              <div class="show-charts">Show Chart</div>
-          
-              <div class="pm_chart_container pm_is_hidden">
-                <canvas id="myChart" width="auto"></canvas>
+      <div id="root">
+        <div class="dk__start-content vh-container">
+          <div class="dk-current-day"></div>
+          <div class="dk-five-days">
+            <section class="pm_section">
+              <div class="pm_weather">
+                <!-- <h2 class="js-heading"></h2> -->
+                <ul
+                  class="pm_days js-five-days"
+                  style="
+                    transform: translateX(-84px) translateX(-84px)
+                      translateX(84px) translateX(84px);
+                    transition-duration: 500ms;
+                  "
+                ></ul>
+
+                <button class="FiveDaysSmall__navBtn pm_is_hidden">
+                  <span class="FiveDaysSmall__navBtn--left"> &lt;</span>
+                </button>
+                <button class="FiveDaysSmall__navBtn pm_is_hidden">
+                  <span class="FiveDaysSmall__navBtn--right"> &gt;</span>
+                </button>
+
+                <ul class="pm_5day_more_info"></ul>
               </div>
+            </section>
+
+            <div class="show-charts">Show Chart</div>
+
+            <div class="pm_chart_container pm_is_hidden">
+              <canvas id="myChart" width="auto"></canvas>
             </div>
+          </div>
         </div>
+      </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

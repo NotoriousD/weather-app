@@ -1,3 +1,5 @@
-<div id={{name}} class="d_btn-container"><span class="d_added-city">{{name}}</span><button class="d_close-btn"
-        data-id={{name}}></button>
+{{#each this as |item|}}
+<div id={{item.id}} class="d_btn-container"><a class="d_added-city">{{item}}</a><button class="d_close-btn"
+        data-id={{item.id}}></button>
 </div>
+{{/each}}
