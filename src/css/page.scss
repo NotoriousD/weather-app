@@ -1,14 +1,23 @@
-
 html {
   box-sizing: border-box;
 }
-*{
+
+* {
   outline: none;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  width: 100%;
 }
 
 .content {
@@ -17,44 +26,42 @@ html {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.dk-five-days{
+.dk-five-days {
   display: none;
 }
 
-.dk-current-day{
+.dk-current-day {
   width: 100%;
 }
 
-.vh-oneday__container{
+.vh-oneday__container {
   display: flex;
   justify-content: flex-end;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.vh-button__container{
+.vh-button__container {
   display: flex;
   justify-content: flex-end;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.vh-div__desktop{
+.vh-div__desktop {
   padding-right: calc((100vw - 1280px)/2);
 }
 
-#root{
+#root {
   position: relative;
   padding-top: 100px;
 }
 
-.inner{
+.inner {
   background-color: rgba(0, 0, 0, .5);
 }
 
-.d_search-form{
+.d_search-form {
   padding-left: 15px;
   display: flex;
 }
-
-

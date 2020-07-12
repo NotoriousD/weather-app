@@ -1,21 +1,55 @@
 'use strict';
-const baseUrl = 'https://pixabay.com/api/';
-const key = '17057645-800c0a9b8f77d96e9de1e24f2';
 
-//   'https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=что_искать&page=номер_страницы&per_page=12&key=твой_ключ';
+const baseUrl = 'https://api.openweathermap.org/data/2.5/';
+const key = 'ef09053ba5c2f49c031def93624f1f41';
+const curentWeather = 'weather?';
+const forcast = 'forecast?';
 
-const imageType =
-  '?image_type=photo&orientation=horizontal&category=scince,places';
+// api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
 
 export default {
-  page: 1,
-  perPage: 3,
-  query: 'kiev',
-  fetchPictures() {
-    const requestParams = `&q=${this.query}&page=${this.page}&per_page=${this.perPage}&key=${key}`;
-    return fetch(baseUrl + imageType + requestParams).then(response =>
-      response.json(),
-    );
+  lat: '50.4333',
+  lon: '30.5167',
+  //   lat: '',
+  //   lon: '',
+  //   query: '',
+  query: '',
+  fetchCurrentWeatherByCoord(lat, lon) {
+    const requestParams = `lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+    return fetch(baseUrl + curentWeather + requestParams)
+      .then(response => response.json())
+
+      .catch(error => {
+        console.log(error);
+      });
+  },
+
+  fetchCurrentWeatherByCity(city) {
+    const requestParams = `q=${city}&appid=${key}&units=metric`;
+    return fetch(baseUrl + curentWeather + requestParams)
+      .then(response => response.json())
+      .catch(error => {
+        console.log(error);
+      });
+  },
+
+  fetchWeatherForecastByCoord() {
+    const requestParams = `lat=${this.lat}&lon=${this.lon}&appid=${key}&units=metric`;
+    return fetch(baseUrl + forcast + requestParams)
+      .then(response => response.json())
+      .catch(error => {
+        console.log(error);
+      });
+  },
+
+  fetchWeatherForecastByCity() {
+    const requestParams = `q=${this.query}&appid=${key}&units=metric`;
+    return fetch(baseUrl + forcast + requestParams)
+      .then(response => response.json())
+
+      .catch(error => {
+        console.log(error);
+      });
   },
 
   get searchQuerry() {
@@ -24,5 +58,20 @@ export default {
 
   set searchQuerry(string) {
     this.query = string;
+  },
+
+  get cityLatitude() {
+    return this.lat;
+  },
+
+  set cityLatitude(string) {
+    this.lat = string;
+  },
+  get cityLongitude() {
+    return this.lon;
+  },
+
+  set cityLongitude(string) {
+    this.lon = string;
   },
 };

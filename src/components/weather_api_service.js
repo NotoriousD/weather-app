@@ -8,8 +8,8 @@ const forcast = 'forecast?';
 // api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
 
 export default {
-  lat: '50.461944599999995',
-  lon: '30.335979699999996',
+  lat: '50.4333',
+  lon: '30.5167',
   //   lat: '',
   //   lon: '',
   //   query: '',
