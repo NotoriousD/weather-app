@@ -459,6 +459,7 @@ body {
   background-color: rgb(255, 255, 255);
 }
 .d_search-box {
+  padding-top: 15px;
   background-color: rgb(255, 255, 255);
   border: none;
   border-radius: 50px;
@@ -557,4 +558,6 @@ body {
   background-position: center;
   background-color: #485b7d;
   border: none;
+}
+@media (min-width: 768px) {
 }
