@@ -1,5 +1,6 @@
 // 'use strict';
 // import Siema from 'siema';
+// import favCityTemplate from '../templates/favListItem.hbs';
 
 // const refs = {
 //   input: document.querySelector('.d_search-box'),
@@ -89,20 +90,20 @@
 //   // LOCAL STORAGE
 //   localStorage.setItem('City', JSON.stringify(savedCities));
 
-//   const mySiema = new Siema({
-//     perPage: citiesFromStorage.length > 3 ? 3 : citiesFromStorage.length,
-//     multipleDrag: true,
-//     selector: '.siema',
-//     easing: 'ease-out',
-//     draggable: true,
-//     duration: 200,
-//     threshold: 20,
-//     startIndex: 0,
-//     loop: true,
-//     rtl: false,
-//     onInit: () => {},
-//     onChange: () => {},
-//   });
+// const mySiema = new Siema({
+//   perPage: citiesFromStorage.length > 3 ? 3 : citiesFromStorage.length,
+//   multipleDrag: true,
+//   selector: '.siema',
+//   easing: 'ease-out',
+//   draggable: true,
+//   duration: 200,
+//   threshold: 20,
+//   startIndex: 0,
+//   loop: true,
+//   rtl: false,
+//   onInit: () => {},
+//   onChange: () => {},
+// });
 
 //   document
 //     .querySelector('.d_right-btn')
