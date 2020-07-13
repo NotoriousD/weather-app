@@ -16,7 +16,7 @@ body {
   font-family: 'Lato', sans-serif;
   position: relative;
   overflow-x: hidden;
-  margin: 0 !important;
+  margin: 0 auto;
   max-width: 100%;
   width: 100%;
   min-height: 100vh;
@@ -498,6 +498,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
+  padding-top: 5px;
   margin-right: 0px;
   border-color: transparent;
   background-color: transparent;
@@ -527,14 +528,26 @@ body {
   fill: #7e8792;
   background-image: url(./images/star.svg);
 }
-.d_btn-container {
-  background-color: #485b7d;
+.d_favList {
   display: flex;
   align-items: center;
   height: 25px;
   width: intrinsic;
   opacity: 0.6;
   border-radius: 20px;
+}
+.d_favList-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 25px;
+  width: intrinsic;
+  min-width: 85px;
+  background-color: rgb(16, 33, 54);
+  opacity: 0.471;
+  opacity: 0.6;
+  border-radius: 20px;
+  margin-right: 10px;
 }
 .d_added-city {
   font-size: 12px;
@@ -545,7 +558,10 @@ body {
   text-align: center;
   cursor: pointer;
   padding-left: 14px;
-  padding-bottom: 4px;
+}
+.d_added-city:focus,
+.d_added-city:hover {
+  color: #ff6b08;
 }
 .d_close-btn {
   fill: #acb5c4;
@@ -553,8 +569,14 @@ body {
   height: 25px;
   background-image: url(./images/close.svg);
   background-position: center;
-  background-color: #485b7d;
+  background-color: rgb(16, 33, 54);
   border: none;
+  border-radius: 50px;
+}
+.d_close-btn:focus,
+.d_close-btn:hover {
+  cursor: pointer;
+  fill: #ff6b08;
 }
 /* @media (min-width: 768px) {
 } */
