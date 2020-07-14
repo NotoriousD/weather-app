@@ -3,10 +3,10 @@ import './css/fiveday.scss';
 import './media.css';
 import './css/page.scss';
 // import './css/dariaK/inputAndSlider.scss';
-import './components/5dayModule';
-import './components/5dayHeading';
+/* import './components/5dayModule';
+import './components/5dayHeading'; */
 import './components/chart';
-import './components/searchAndSlider.js';
+/* import './components/searchAndSlider.js'; */
 // import './components/api'; */
 import './components/pixabay_api_service';
 import './components/inputSearch';
@@ -19,6 +19,7 @@ import {
 } from './components/rendering_degree';
 /* import PNotify from '../node_modules/@pnotify/core/dist/PNotify';
 import '../node_modules/@pnotify/core/dist/BrightTheme.css'; */
+import './components/localStorage/storage'
 
 let store = {
   state: 'One',

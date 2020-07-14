@@ -510,6 +510,9 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
+  max-width: 450px;
+  margin: 0 auto;
+  position: relative;
 }
 .d_siema {
   width: 300px;
