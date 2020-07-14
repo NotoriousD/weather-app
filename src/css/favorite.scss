@@ -1,0 +1,43 @@
+.favorite__cities{
+    padding-top: 15px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 90px;
+    max-width: 460px;
+}
+
+.city{
+    padding: 5px 10px;
+    border-radius: 50px;
+    background-color: rgba(16,33,54, .47);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-decoration: underline;
+    letter-spacing: 0.42px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin-right: 10px;
+}
+
+.delete-city{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px;
+    height: 12px;
+    background-image: url(../images/close.svg);
+    background-position: center center;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.city-text{
+    margin-right: 5px;
+}

@@ -8,7 +8,7 @@ searchForm.addEventListener('submit', e => {
   e.preventDefault();
   const input = searchForm.elements.city;
   const inputValue = input.value;
-  imgArr.querry = inputValue;
+  imgArr.query = inputValue;
   imgArr.fetchImages().then(data => {
     console.log(data)
     const number = randomIntegerFromInterval(0, 3)
