@@ -6,5 +6,3 @@ pixabayApi.fetchPictures();
 weatherApi.fetchCurrentWeatherByCoord();
 weatherApi.fetchCurrentWeatherByCity();
 weatherApi.fetchWeatherForecastByCoord();
-weatherApi.fetchWeatherForecastByCity();
-

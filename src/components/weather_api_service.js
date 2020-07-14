@@ -52,14 +52,9 @@ export default {
 
   fetchWeatherForecastByCity() {
     const requestParams = `q=${this.query}&appid=${key}`;
-    return fetch(baseUrl + forcast + requestParams)
-      .then(response => response.json())
-      .then(weather => {
-        console.log(weather);
-      })
-      .catch(error => {
-        console.log(error);
-      });
+    return fetch(baseUrl + forcast + requestParams).then(response =>
+      response.json(),
+    );
   },
 
   get searchQuerry() {
