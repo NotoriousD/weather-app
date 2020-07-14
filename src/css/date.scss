@@ -1,0 +1,120 @@
+.vh_date_section {
+  justify-content: space-between;
+}
+
+.vh_date_container {
+  width: 601px;
+  height: 277px;
+  filter: drop-shadow(0px 8px 21.5px rgba(16, 33, 54, 0.59));
+  background-color: rgba(16, 33, 54, 0.6);
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
+}
+
+.vh_date_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 30px;
+}
+
+.vh_date {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 63px;
+  font-size: 80px;
+  letter-spacing: 3px;
+  color: #f7f7f7;
+  font-weight: 300;
+}
+
+.vh_date sup {
+  vertical-align: top;
+  font-size: 0.3em;
+}
+
+.vh_clock_month_container {
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.vh_clocks_block {
+  display: flex;
+  flex-direction: row;
+}
+
+.vh_clock_month_container :first-child {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.vh_sunset_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.sunrise_border {
+  padding-right: 10px;
+  margin-right: 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.sunrise {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.sunrise img {
+  margin-right: 8px;
+}
+
+// --------------------------Quotes--------------------------
+.vh_quotes_container {
+  background-image: url('https://i.ibb.co/VpP1mxY/quotes.png');
+  background-repeat: no-repeat;
+  background-position: 95% 7%;
+  text-align: right;
+  width: 400px;
+  margin-right: 100px;
+}
+
+.vh_quotes_text {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  padding-top: 40px;
+  font-weight: normal;
+  font-style: italic;
+  line-height: 21px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  letter-spacing: 1px;
+  line-height: 32px;
+  color: #ffffff;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.vh_quotes_autor {
+  font-size: 18px;
+  line-height: 32px;
+  color: #ffffff;
+  font-weight: 400;
+  text-align: right;
+  font-size: 18px;
+  font-style: normal;
+}

@@ -1,0 +1,54 @@
+/*--------------- STYLES FOR INPUT---------------------*/
+.d_container {
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.d_input-container {
+  display: flex;
+  justify-content: space-around;
+  width: 505px;
+  height: 48px;
+  border-radius: 24px;
+  background-color: #ffffff;
+  border: 2px solid blu;
+  margin-bottom: 130px;
+}
+
+.d_left_icon {
+  display: flex;
+  width: 62px;
+  justify-content: center;
+  align-items: center;
+}
+
+.d_left_icon svg {
+  cursor: pointer;
+}
+
+.d_right_icon svg {
+  cursor: pointer;
+}
+
+.d_right_icon {
+  display: flex;
+  width: 62px;
+  justify-content: center;
+  align-items: center;
+}
+
+.d_input {
+  width: 380px;
+  outline: none;
+  border: none;
+
+}
+
+::placeholder {
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  font-weight: 400;
+}

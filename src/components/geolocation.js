@@ -1,9 +1,12 @@
 export const getGeolocation = () => {
-  navigator.geolocation.getCurrentPosition(success, error);
+  return navigator.geolocation.getCurrentPosition(success, error);
 };
 
 const success = pos => {
-  console.log(pos);
+  return{
+    lat: pos.coords.latitude,
+    lon: pos.coords.longitude
+  }
 };
 
 const error = err => {

@@ -1,19 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Dinosaur weather</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Don't forget to delete this style tag. -->
-    <style></style>
-  </head>
 
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Dinosaur weather</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <!-- style -->
+</head>
+
+<body class="content" style="background-image: url(https://i.ibb.co/vw0r56y/bg-default.png);">
+
+  <div>
+
+    <!-- ---------------------Блок инпут--------------------------- -->
+    <div class="d_container  ">
+      <div class="d_input-container">
+
+        <div class="d_left_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path fill="#adb3ba"
+              d="M20.94 11c-.46-4.17-3.77-7.48-7.94-7.94V1h-2v2.06C6.83 3.52 3.52 6.83 3.06 11H1v2h2.06c.46 4.17 3.77 7.48 7.94 7.94V23h2v-2.06c4.17-.46 7.48-3.77 7.94-7.94H23v-2h-2.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z" />
+          </svg>
+        </div>
+        <form class="d_input-container" id="search-form">
+          <input class="d_input" id="search-form" type="text" name="city" placeholder="Enter the city">
+        </form>
+        <div class="d_right_icon">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+            <path stroke="#adb3ba" fill='none' stroke-width="2px"
+              d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <!-- -----------Блок дегри---------------------------------- -->
+    <div class="vh_degree_section is_flex">
+      <!-- ----------------Сюда рентер погоды + город-------------------------- -->
+      <div class="vh_degree_container"></div>
+    </div>
+
+    <!-- -------------------------Блок копки ----------------------------------------- -->
+    <div class="vh-change_day_section is_flex">
+      <div class="vh_change_btn_container">
+        <div class="vh_today_btn" style="background-color: white;"> <span>TODAY</span> </div>
+        <div class="vh_5day_btn" style=" background-color: #9d9fa9;"><span>5 DAYS</span></div>
+      </div>
+    </div>
+    <!-- ----------------------------------Блок даты + стихи(date.scss)--------------------------------------------- -->
+
+    <div class="vh_date_section is_flex">
+      <div class="vh_date_container"></div>
+      <div class="vh_quotes_container">
+        <p class="vh_quotes_text">Life isn’t about getting and having, it’s about giving and being.</p>
+        <cite class="vh_quotes_autor">Kevin Kruse</cite>
+      </div>
+    </div>
+    <!-- -----------------------------------------Блок 5 дней  + чарты + инфо------------------------------------ -->
+    <section class="fiveday_block is_hidden">
+
+      <h2 class="js-heading"></h2>
+
+      <div class="pm_section ">
+        <div class="pm_weather">
+          <ul class="pm_days js-five-days"></ul>
+          <div class="pm_info_btn_container_mobile">
+            <div class="pm_img_contaner">
+              <span class="pm_js_prev_mobile">&lt;</span>
+            </div>
+            <div class="pm_img_contaner">
+              <span class="pm_js_next_mobile">&gt;</span>
+            </div>
+          </div>
+
+          <div class="pm_more_info_block">
+            <div class="pm_close_btn_container">
+              <div class="pm_js_close_btn"><span>&#10060;</span></div>
+            </div>
+
+            <ul class="pm_5day_more_info"></ul>
+            <div class="pm_info_btn_container">
+              <div class="pm_img_contaner" id="pm_js_prev">
+                <span class="pm_js_prev">&lt;</span>
+              </div>
+              <div class="pm_img_contaner" id="pm_js_next">
+                <span class="pm_js_next">&gt;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pm_show_charts_container js_btn_chart">
+        <div class="show-charts">Show Chart</div>
+        <div class="pm_img_contaner">
+          <span class="pm_img_chart_direction">+</span>
+        </div>
+      </div>
+
+      <div class="pm_chart_container pm_is_hidden">
+        <canvas id="myChart" width="auto"></canvas>
+      </div>
+    </section>
+
+
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+
 </html>
+
+
+
+
+<!-- <div class="container">
+      <div class="d_layout">
+        <div class="d_slider-item">
+          <a href="#" class="d_slider-link">Kyiv</a>
+          <a href="#" role="button" class="d_close-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+              viewBox="0 0 24 24" width="24">
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+          </a>
+        </div>
+        <div class="d_slider-item">
+          <a href="#" class="d_slider-link">Paris</a>
+          <a href="#" role="button" class="d_close-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+              viewBox="0 0 24 24" width="24">
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+          </a>
+        </div>
+        <div class="d_slider-item">
+          <a href="#" class="d_slider-link">London</a>
+          <a href="#" role="button" class="d_close-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+              viewBox="0 0 24 24" width="24">
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+              <path d="M0 0h24v24H0z" fill="none" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+
+      
+    </div>
+    
+      <div class="dk__start-content vh-container">
+        <div class="dk-current-day"></div>
+        <div class="dk-five-days">
+          
+         <section>
+          <div class="pm_section">
+            <div class="pm_weather">
+              <h2 class="js-heading"></h2>
+              <ul class="pm_days js-five-days"></ul>
+              <div class="pm_info_btn_container_mobile">
+                <div class="pm_img_contaner">
+                  <span class="pm_js_prev_mobile">&lt;</span>
+                </div>
+                <div class="pm_img_contaner">
+                  <span class="pm_js_next_mobile">&gt;</span>
+                </div>
+              </div>
+      
+              <div class="pm_more_info_block">
+                <div class="pm_close_btn_container">
+                  <div class="pm_js_close_btn"><span>&#10060;</span></div>
+                </div>
+      
+                <ul class="pm_5day_more_info"></ul>
+                <div class="pm_info_btn_container">
+                  <div class="pm_img_contaner" id="pm_js_prev">
+                    <span class="pm_js_prev">&lt;</span>
+                  </div>
+                  <div class="pm_img_contaner" id="pm_js_next">
+                    <span class="pm_js_next">&gt;</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pm_show_charts_container js_btn_chart">
+            <div class="show-charts">Show Chart</div>
+            <div class="pm_img_contaner">
+              <span class="pm_img_chart_direction">+</span>
+            </div>
+          </div>
+          <div class="pm_chart_container pm_is_hidden">
+            <canvas id="myChart" width="auto"></canvas>
+          </div>
+        </section>
+      </div>
+   </div> -->

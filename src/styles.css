@@ -1,3 +1,7 @@
+/* * {
+  outline: 1px solid red;
+} */
+
 html {
   box-sizing: border-box;
 }
@@ -10,8 +14,22 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  position: relative;
-  overflow: hidden;
-  max-width: 100%;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+}
+
+.is_hidden {
+  display: none;
+}
+
+.is_flex {
+  display: flex;
 }

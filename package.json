@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/luxplanjay/webpack-starter-kit/issues"
   },
-  "homepage": "https://github.com/luxplanjay/webpack-starter-kit#readme",
+  "homepage": "https://github.com/MykhayloPishchur/weather",
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -49,10 +49,7 @@
     "webpackbar": "^4.0.0"
   },
   "dependencies": {
-    "chart.js": "^2.9.3",
     "core-js": "^3.6.4",
-    "handlebars": "^4.7.3",
-    "lodash.debounce": "^4.0.8",
-    "moment": "^2.27.0"
+    "handlebars": "^4.7.3"
   }
 }

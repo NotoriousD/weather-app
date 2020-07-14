@@ -1,16 +1,15 @@
-import { getGeolocation } from './components/geolocation';
-import weatherApi from './components/weather_api_service';
 import './styles.css';
-import './css/page.scss';
-import './components/api';
-
-weatherApi.fetchWeatherForecastByCity().then(weather => {
-  chartData(weather);
-});
-
-const chartData = data => {
-  data.list.reduce((day, acc) => {
-    console.log(day);
-    return acc;
-  }, {});
-};
+import './css/normalize.scss'
+import './css/inputAndSlider.scss';
+import './css/degree.scss'
+import './css/change_day.scss'
+import './css/date.scss'
+import './css/fiveday.scss';
+import './components/changeDays';
+import './components/rendering_degree';
+import './components/date';
+import './components/display_quotes';
+import './components/makeHeaders';
+import './components/5dayModule';
+import './components/chart';
+import './components/makeBackground';

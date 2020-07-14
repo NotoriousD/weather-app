@@ -1,0 +1,91 @@
+.vh_degree_section {
+
+  justify-content: flex-end;
+
+}
+
+.vh_degree_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 490px;
+  height: 300px;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  filter: drop-shadow(0px 8px 21.5px rgba(16, 33, 54, 0.59));
+  background-color: #102136;
+}
+
+
+.vh_degree_weather_icon {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.vh_degree_city {
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: #586473;
+}
+
+.vh_degree_tmp {
+  font-size: 90px;
+  letter-spacing: 3px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.vh_min_max_label {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: #586473;
+}
+
+.vh_min_max_label::after {
+  content: '';
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0.2;
+  position: absolute;
+  width: 1px;
+  height: 40px;
+  top: 40%;
+  left: 49%;
+}
+
+
+.vh_min_max_label :first-child {
+  margin-right: 20px;
+}
+
+.vh_min_max_label :last-child {
+  margin-left: 20px;
+}
+
+.vh_min_max_item {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 7px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Lato";
+}
+
+.vh_min_max_item :first-child {
+  margin-right: 20px;
+}
+
+.vh_min_max_item :last-child {
+  margin-left: 20px;
+}
