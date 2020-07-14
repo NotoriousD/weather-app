@@ -1,67 +1,104 @@
+import weatherApi from '../components/weather_api_service.js';
 import moment from 'moment';
-import imgSunrise from '../images/sunrise.svg';
-import imgSunset from '../images/sunset.svg';
-import { randomQuote } from './display_quotes';
 
-export const layoutDate = data =>
-  `
-    <div class="vh-oneday__container">
-        <div class="vh-degree container vh-bg">
-            <img src="http://openweathermap.org/img/wn/${
-              data.weather[0].icon
-            }@2x.png" alt="${data.weather[0].description}"
-                width="42" class="vh-degree__img">
-            <p class="vh-degree__country">${data.name}, ${data.sys.country}</p>
-            <div class="vh-degree__temperatura">
-                <p class="vh-temperatura-now">${Math.round(data.main.temp)}</p>
-                <ul class="vh-temperatura-list vh-list">
-                    <li class="vh-list__item vh-list__item-border">
-                        <p class=" vh-item__name">min</p>
-                        <p class="vh-item__temprt">${Math.round(data.main.temp_min)}</p>
-                    </li>
-                    <li class="vh-list__item">
-                        <p class="vh-item__name">max</p>
-                        <p class="vh-item__temprt">${Math.round(data.main.temp_max)}</p>
-                    </li>
-                </ul>
-            </div>
-            </div>
-        </div>
-    <div class="vh-button">
-        <button class="vh-btns__today vh-btns">TODAY</button>
-        <button class="vh-btns__fivedays vh-btns">5 DAYS</button>
-    </div>
-    <div class="vh-div__desktop">
-        <div class="vh-data vh-bg vh-data__bg">
-            <div class="vh-data__date">
-                <p class="vh-data__date-number vh-date__font">${moment.unix(data.dt).format('DD')}</p>
-                <p class="vh-data__date-day vh-date__font">${moment.unix(data.dt).format('ddd')}</p>
-            </div>
-<div class="vh-data_time">
-            <ul class="vh-data__date-list vh-list">
-                <li class="vh-date__item vh-item__after">
-                    <p>${moment.unix(data.dt).format('MMMM')}</p>
-                </li>
-                <li class="vh-date__item vh-item__before">
-                    <p>${moment.unix(data.dt).format('hh:mm:ss')}</p>
-                </li>
-            </ul>
 
-            <ul class="vh-data__sun-list vh-list">
-                <li class="vh-sun__item ">
-                    <img src="${imgSunrise}" alt="sunrise" width="25" height="33">
-                    <p class="vh-item__after">${moment.unix(data.sys.sunrise).format('hh:mm')}</p>
-                </li>
-                <li class="vh-sun__item vh-item__before">
-                    <img src="${imgSunset}" alt="sunrise" width="25" height="33">
-                    <p>${moment.unix(data.sys.sunset).format('hh:mm')}</p>
-                </li>
-            </ul>
-            </div>
+const dateContainer = document.querySelector('.vh_date_container')
+
+navigator.geolocation.getCurrentPosition(function (pos) {
+  weatherApi.fetchCurrentWeatherByCoord(pos.coords.latitude, pos.coords.longitude)
+    .then(data => {
+      dateContainer.innerHTML = renderDateModule(data)
+    });
+}, function () {
+  const city = "Kiev"
+  weatherApi.fetchCurrentWeatherByCity(city).then(data => {
+    dateContainer.innerHTML = renderDateModule(data)
+  })
+});
+
+
+
+
+const renderDateModule = function (data) {
+
+  return `
+<div class="vh_date_block">
+    <div class="vh_date"><div> ${getDayNumber()}<sup>th</sup> ${getWeekDay()}</div></div>
+    <div class="vh_clocks_block">
+        <div class="vh_clock_month_container">
+            <span>${getMonth()}</span>
+            <span id="clock"></span>
         </div>
-        <div class="vh-quote container">
-          <p class="vh-quote__text">${randomQuote.quote}</p>
-          <p class="vh-quote__author">${randomQuote.author}</p>
+        <div class="vh_sunset_container">
+            <div class="sunrise"><img src="https://i.ibb.co/X2Xp5Mp/sunrise.png" alt=""> <span class="sunrise_border"> ${getSunset(data.sys.sunrise)}</span></div>
+            <div class="sunrise"><img src="https://i.ibb.co/fp64SZM/sunset.png" alt=""> <span> ${getSunset(data.sys.sunset)}</span></div>
         </div>
     </div>
-    `;
+</div>
+
+`
+
+}
+
+
+
+
+function getWeekDay() {
+  const a = new Date();
+  const days = [
+    'Sun',
+    'Mony',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+    'Sat',
+  ];
+  const dayOfWeek = days[a.getDay()];
+  return dayOfWeek;
+}
+
+
+function getDayNumber() {
+  const a = new Date();
+  const day = a.getDate();
+  return day;
+}
+
+
+function getMonth() {
+  const a = new Date();
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  const month = months[a.getMonth()];
+
+  return month;
+}
+
+function getSunset(number) {
+  let date = new Date(number * 1000);
+  let hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours();
+  let minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes();
+  return hours + ':' + minutes;
+}
+
+function getTime() {
+  var date = new Date(),
+    hours = (date.getHours() < 10) ? '0' + date.getHours() : date.getHours(),
+    minutes = (date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes(),
+    seconds = (date.getSeconds() < 10) ? '0' + date.getSeconds() : date.getSeconds();
+  document.getElementById('clock').innerHTML = hours + ':' + minutes + ':' + seconds;
+}
+setInterval(getTime, 1000);

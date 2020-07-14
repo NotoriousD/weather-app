@@ -9,7 +9,7 @@ searchForm.addEventListener('submit', e => {
   e.preventDefault();
 
   const form = e.currentTarget;
-  const input = form.elements.query;
+  const input = form.elements.city;
   const inputValue = input.value;
 
   weatherApi.searchQuerry = inputValue;

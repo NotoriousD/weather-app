@@ -12,12 +12,16 @@ img {
   height: auto;
 }
 
-.pm_section {
+.fiveday_block {
   width: 1060px;
+  margin: auto;
+
+}
+
+.pm_section {
   border-radius: 35px;
   filter: drop-shadow(0px 8px 21.5px rgba(16, 33, 54, 0.59));
   background-color: rgba(16, 33, 54, 0.6);
-  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -45,15 +49,16 @@ img {
 }
 
 .js-heading {
+
   margin-bottom: 14px;
   font-weight: 700;
-  font-size: 18px;
-  color: #fff;
-  font-family: 'Lato';
-  font-style: normal;
   letter-spacing: 1px;
-  line-height: 22px;
-  display: none;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 1px;
+  color: #ffffff;
+
+  text-align: center;
 }
 
 @media (max-width: 320px) {
@@ -224,6 +229,8 @@ img {
   .pm_card_container {
     cursor: none;
   }
+
+}
 
 .pm_card_container:not(:last-child) {
   margin-right: 10px;

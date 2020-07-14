@@ -1,0 +1,44 @@
+.vh-change_day_section {
+  justify-content: flex-end;
+  flex-direction: row;
+  padding-top: 28px;
+}
+
+
+
+.vh_js_city_maker {
+  font-size: 28px;
+  line-height: 22px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.vh_change_btn_container {
+  margin-right: 110px;
+  margin-left: 160px;
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.vh_today_btn {
+  width: 126px;
+  height: 29px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vh_5day_btn {
+  width: 126px;
+  height: 29px;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
