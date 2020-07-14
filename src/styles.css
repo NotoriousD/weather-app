@@ -19,12 +19,10 @@ body {
   margin: 0 !important;
   max-width: 100%;
   width: 100%;
-  min-height: 100vh;
   background-image: url(./images/Kyiv.png);
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
-  color: #ffffff;
 }
 
 .vh-list {
@@ -74,8 +72,12 @@ body {
 .vh-bg {
   margin: 0 auto;
   padding: 0;
+
+  min-height: 190px;
   margin-bottom: 32px;
-  background-color: rgba(16, 33, 54, 0.6);
+
+  background-color: rgb(16, 33, 54);
+  border-radius: 35px;
   box-shadow: 0px 8px 43px 0px rgba(16, 33, 54, 0.59);
 }
 
@@ -157,6 +159,10 @@ body {
   font-size: 18px;
 }
 
+.vh-data__bg {
+  opacity: 0.6;
+}
+
 /* стили для блока с кнопками */
 .vh-button {
   margin: 0 auto;
@@ -178,7 +184,7 @@ body {
   font-weight: 700;
   color: rgb(0, 0, 0);
 
-  transition: all 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
 }
 
 .vh-btns:hover,
@@ -201,16 +207,15 @@ body {
   width: 170px;
   display: flex;
   justify-content: space-around;
-  margin-bottom: 0px;
+  margin-bottom: 24px;
 }
 
 .vh-date__font {
   margin: 0;
   padding: 0;
   font-size: 45px;
-  line-height: 1;
+  line-height: 0.6;
   text-align: inherit;
-  font-weight: 300;
 }
 
 .vh-data__date-number {
@@ -237,6 +242,7 @@ body {
 } */
 
 .vh-item__after {
+  padding: 2px;
   padding-right: 10px;
   border-right: 1px solid rgba(231, 232, 235, 0.4);
 }
@@ -293,6 +299,7 @@ body {
   }
 
   .vh-bg {
+    min-height: 276px;
     margin-bottom: 46px;
   }
 
@@ -314,7 +321,7 @@ body {
   .vh-data__date,
   .vh-data__date-list,
   .vh-data__sun-list {
-    width: auto;
+    width: 314px;
   }
 
   .vh-date__font,
@@ -351,11 +358,11 @@ body {
   .vh-container {
     width: 1060px;
   }
+
   .dk__start-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    align-items: flex-end;
   }
 
   .vh-degree {
@@ -363,11 +370,12 @@ body {
     align-items: center;
     padding: 40px 0;
   }
+
   .vh-bg {
     margin: 0;
+    min-height: 302px;
     margin-bottom: 30px;
   }
-
   .vh-data {
     padding: 69px;
     padding-left: 100px;
@@ -394,15 +402,12 @@ body {
   .vh-div__desktop {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
   }
 
   .vh-data {
     margin: 0;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
-    position: relative;
-    left: 0;
   }
 
   .vh-data__date-list {
@@ -417,14 +422,13 @@ body {
   .vh-data_time {
     display: flex;
     flex-wrap: nowrap;
-    align-items: flex-end;
   }
+
   .vh-quote {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
-    max-width: 375px;
   }
 
   .vh-quote__author {
@@ -459,6 +463,7 @@ body {
   background-color: rgb(255, 255, 255);
 }
 .d_search-box {
+  padding-top: 15px;
   background-color: rgb(255, 255, 255);
   border: none;
   border-radius: 50px;
@@ -560,4 +565,6 @@ body {
   background-position: center;
   background-color: #485b7d;
   border: none;
+}
+@media (min-width: 768px) {
 }

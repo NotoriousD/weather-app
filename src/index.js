@@ -9,10 +9,13 @@ import './components/chart';
 /* import './components/searchAndSlider.js'; */
 // import './components/api'; */
 import './components/pixabay_api_service';
+import query from './components/weather_api_service';
 import './components/inputSearch';
+import favCityTemplate from './templates/favListItem.hbs';
 import pixabayApi from './components/pixabay_api_service';
 import './components/rendering_degree';
 import './components/display_quotes';
+import Siema from 'siema';
 import {
   queryLayoutOneDay,
   startOneDayLayout,
@@ -25,25 +28,30 @@ let store = {
   state: 'One',
 };
 
-const input = document.querySelector('#d_search');
-const form = document.querySelector('#search-form');
+const refs = {
+  input: document.querySelector('.d_search-box'),
+  starBtn: document.querySelector('.d_star-icon'),
+  cityContainer: document.querySelector('.d_siema'),
+  deleteBtn: document.querySelector('.d_close-btn'),
+  form: document.querySelector('#search-form'),
+};
 
-form.addEventListener('submit', submitForm);
+refs.form.addEventListener('submit', submitForm);
 
 function submitForm(event) {
   event.preventDefault();
-  /* if (input.value === '') {
+  if (input.value === '') {
     PNotify.error({
       title: 'NOTICE!',
       text: 'Please write search city!',
     });
-  } */
-  pixabayApi.fetchPictures().then(images => {
-    const number = getRandomInt(3);
-    document.body.style.backgroundImage = `url(${images.hits[number].largeImageURL})`;
-  });
+  }
+  if (store.state === '')
+    pixabayApi.fetchPictures().then(images => {
+      const number = getRandomInt(3);
+      document.body.style.backgroundImage = `url(${images.hits[number].largeImageURL})`;
+    });
   queryLayoutOneDay(input.value);
-    
 }
 
 startOneDayLayout();
