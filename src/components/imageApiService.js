@@ -14,4 +14,12 @@ export default {
       response.json(),
     );
   },
+  fetchImagesByCity(city) {
+    const category = `&category=places,buildings,travel`;
+    const searchParams = `q=${city}+city&page=${this.page}&per_page=${this.perPage}&key=${this.key}`;
+
+    return fetch(baseUrl + searchParams + category).then(response =>
+      response.json(),
+    );
+  },
 };

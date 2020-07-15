@@ -1,6 +1,6 @@
 import imgArr from '../components/imageApiService.js';
 
-const bck = document.querySelector('.content');
+export const bck = document.querySelector('.content');
 const searchForm = document.querySelector('#search-form');
 const input = document.querySelector('.d_input');
 
@@ -16,6 +16,6 @@ searchForm.addEventListener('submit', e => {
   });
 });
 
-const randomIntegerFromInterval = (min, max) => {
+export const randomIntegerFromInterval = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };

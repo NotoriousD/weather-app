@@ -1,9 +1,7 @@
 import weatherApi from '../components/weather_api_service.js';
 
-
-const degree = document.querySelector('.vh_degree_container')
+export const degree = document.querySelector('.vh_degree_container');
 const searchForm = document.querySelector('#search-form');
-
 
 searchForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -12,34 +10,35 @@ searchForm.addEventListener('submit', e => {
   const inputValue = input.value;
 
   weatherApi.fetchCurrentWeatherByCity(inputValue).then(data => {
-    console.log(data)
-    degree.innerHTML = renderDegree(data)
-  })
-})
-
-
-
-// -----------по гео или дефолту-------------------------------------
-navigator.geolocation.getCurrentPosition(function (pos) {
-  weatherApi.fetchCurrentWeatherByCoord(pos.coords.latitude, pos.coords.longitude)
-    .then(data => {
-      console.log(data)
-      degree.innerHTML = renderDegree(data)
-    });
-}, function () {
-  const city = "Kiev"
-  weatherApi.fetchCurrentWeatherByCity(city).then(data => {
-    console.log(data)
-    degree.innerHTML = renderDegree(data)
-  })
+    console.log(data);
+    degree.innerHTML = renderDegree(data);
+  });
 });
 
+// -----------по гео или дефолту-------------------------------------
+navigator.geolocation.getCurrentPosition(
+  function (pos) {
+    weatherApi
+      .fetchCurrentWeatherByCoord(pos.coords.latitude, pos.coords.longitude)
+      .then(data => {
+        console.log(data);
+        degree.innerHTML = renderDegree(data);
+      });
+  },
+  function () {
+    const city = 'Kiev';
+    weatherApi.fetchCurrentWeatherByCity(city).then(data => {
+      console.log(data);
+      degree.innerHTML = renderDegree(data);
+    });
+  },
+);
 
-
-
-const renderDegree = function (data) {
+export const renderDegree = function (data) {
   return `<div class="vh_degree_weather_icon">
-  <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" alt=""></div>
+  <img src="https://openweathermap.org/img/w/${
+    data.weather[0].icon
+  }.png" alt=""></div>
   <div class="vh_degree_city">${data.name}, ${data.sys.country}</div>
   <div class="vh_degree_tmp">${Math.round(data.main.temp)}°</div>
   <div class="vh_min_max_label">
@@ -51,7 +50,5 @@ const renderDegree = function (data) {
   <span>${Math.round(data.main.temp_max)}°</span>
 </div>
 
-  `
-
-
-}
+  `;
+};
