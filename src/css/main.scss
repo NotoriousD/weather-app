@@ -1,10 +1,13 @@
 .bg-dark {
   background-color: rgba(0, 0, 0, 0.15);
-  padding-bottom: 100px;
 }
 
 #myChart {
   padding: 20px;
+}
+
+.fiveday_block{
+  padding-bottom: 80px;
 }
 
 .d_right_icon:hover,
@@ -186,6 +189,9 @@
   .favorite__cities {
     padding-left: 40px;
     padding-right: 40px;
+  }
+  .fiveday_block{
+    padding-bottom: 40px;
   }
 }
 
