@@ -7,6 +7,16 @@
   padding: 20px;
 }
 
+.d_right_icon:hover,
+.d_right_icon:focus,
+.d_left_icon:hover,
+.d_left_icon:focus,
+.delete-city:hover,
+.delete-city:focus {
+  cursor: pointer;
+  fill: #ff6b08;
+}
+
 .d_input-form {
   display: flex;
   flex-direction: row;
@@ -167,6 +177,10 @@
     width: 100%;
     margin-right: 0;
     padding: 0 20px;
+  }
+  .favorite__cities {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
 

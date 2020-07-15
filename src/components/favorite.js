@@ -4,10 +4,7 @@ import { header } from './makeHeaders';
 import { renderDegree, degree } from './rendering_degree';
 import imgArr from '../components/imageApiService.js';
 import { bck, randomIntegerFromInterval } from './makeBackground';
-/* import defaultModules from '@pnotify/core'
-import PNotify from '@pnotify/core/dist/PNotify'
-import '@pnotify/core/dist/BrightTheme.css'
-import '@pnotify/core/dist/Pnotify.css' */
+import { error } from '@pnotify/core';
 
 $('.favorite__slider').slick({
   slidesToShow: 4,
@@ -44,8 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
   getStoreCities();
 });
 
-/* defaultModules.set(PNotify, {}); */
-
 btn.addEventListener('click', () => {
   let cities = JSON.parse(localStorage.getItem('city'));
   if (!cities.includes(dataInput.value) && cities !== '') {
@@ -63,11 +58,10 @@ btn.addEventListener('click', () => {
             `,
     );
   } else {
-    alert(`${dataInput.value} is already on your favorite list`);
-    /* PNotify.error({
-            title: 'Oh No!',
-            text: 'Something terrible happened.'
-        }); */
+    error({
+      title: dataInput.value,
+      text: `Is already on your favorite list`,
+    });
   }
 });
 
