@@ -1,0 +1,228 @@
+.bg-dark {
+  background-color: rgba(0, 0, 0, 0.15);
+  padding-bottom: 100px;
+}
+
+#myChart {
+  padding: 20px;
+}
+
+.d_input-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 505px;
+}
+
+.toggle-five {
+  max-width: 1060px;
+  transform: translateY(30px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .vh_change_btn_container {
+    margin: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .fiveday_block {
+    width: 100%;
+    max-width: 610px;
+  }
+  .pm_day_week {
+    font-size: 14px;
+  }
+  .pm_info_item:not(:last-child) {
+    margin-right: 15px;
+  }
+  .pm_min_max_label {
+    font-size: 14px;
+  }
+  .pm_min_max_label::after {
+    height: 40px;
+  }
+  .pm_min_max_item {
+    font-size: 18px;
+  }
+  .pm_card_container:not(:last-child) {
+    margin-right: 10px;
+  }
+  .pm_5day_more_info {
+    width: 1060px;
+    justify-content: stretch;
+  }
+  .pm_info_btn_container {
+    display: flex;
+  }
+  .pm_day_month {
+    font-size: 18px;
+  }
+  .pm_chart_container {
+    width: 600px;
+  }
+  #myChart {
+    padding: 20px;
+  }
+  .toggle-five {
+    max-width: 610px;
+    justify-content: center;
+    transform: none;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .vh_degree_section {
+    justify-content: center;
+  }
+  .vh_degree_container {
+    border-radius: 35px;
+  }
+  .vh-change_day_section {
+    justify-content: center;
+  }
+  .vh_date_section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vh_date_container {
+    border-radius: 35px;
+  }
+  .vh_date_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .vh_date_block {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .pm_section {
+    width: 100%;
+  }
+  .pm_chart_container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .pm_section {
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .pm_contant_wrap {
+    background-color: rgba(16, 33, 54, 0.6);
+    border-radius: 35px;
+    padding: 20px;
+  }
+  .pm_weather {
+    padding: 0;
+  }
+  .fiveday_block {
+    padding: 0 20px;
+    padding-bottom: 60px;
+  }
+  .d_input-container {
+    width: 100%;
+  }
+  .d_container {
+    padding: 0 20px;
+    padding-top: 80px;
+  }
+  .d_input-form {
+    width: 100%;
+    max-width: 100%;
+  }
+  .vh_degree_section {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .vh_degree_container {
+    width: 100%;
+  }
+  .vh_change_btn_container {
+    width: 100%;
+    padding: 0 20px;
+    margin-right: 0;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      margin: 0 10px;
+    }
+  }
+  .vh_date_section {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .vh_date_container {
+    width: 100%;
+  }
+  .vh_quotes_container {
+    width: 100%;
+    margin-right: 0;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .d_input-container {
+    padding: 0 5px;
+  }
+  .pm_info_btn_container_mobile {
+    display: flex;
+  }
+  .pm_days {
+    width: 600px;
+    overflow: auto;
+  }
+  .pm_card_container {
+    width: 115px;
+  }
+  .vh_change_btn_container {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div {
+      margin: 0 5px;
+    }
+  }
+  .vh_date {
+    font-size: 45px;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  .vh_date_block {
+    height: 100%;
+    padding: 30px;
+  }
+  .vh_date_container {
+    height: auto;
+  }
+  .vh_clocks_block {
+    flex-direction: column;
+    align-items: center;
+  }
+  .vh_clock_month_container {
+    margin-right: 0;
+    margin: 20px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .vh_change_btn_container {
+    justify-content: space-between;
+    padding: 0 20px;
+    div {
+      margin: 0;
+    }
+  }
+}

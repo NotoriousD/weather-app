@@ -327,13 +327,16 @@ function getDayNumber(number) {
 
 const prevArrow = document.querySelector('#pm_js_prev');
 const nextArrow = document.querySelector('#pm_js_next');
+
 let currentStep = 0;
 
 nextArrow.addEventListener('click', handlerNextHour);
 prevArrow.addEventListener('click', handlerPrevHour);
 
 function handlerNextHour(event) {
-  if (currentStep >= 4) {
+  let items = document.querySelectorAll('.pm_card_container');
+  console.log(items.length);
+  if (currentStep >= items.length - 2) {
     return;
   }
   currentStep++;
@@ -349,12 +352,12 @@ function handlerPrevHour(event) {
 }
 
 function setPositionRight() {
-  moreInfo.style.transform += `translateX(-140px)`;
+  moreInfo.style.transform += `translateX(-125px)`;
   moreInfo.style.transitionDuration = '500ms';
 }
 
 function setPositionLeft() {
-  moreInfo.style.transform += `translateX(140px)`;
+  moreInfo.style.transform += `translateX(125px)`;
   moreInfo.style.transitionDuration = '500ms';
 }
 // -------------------------------------------
@@ -364,12 +367,13 @@ const fivedays = document.querySelector('.pm_days');
 const prevArrowm = document.querySelector('.pm_js_prev_mobile');
 const nextArrowm = document.querySelector('.pm_js_next_mobile');
 let currentStepm = 0;
-/* 
+
 nextArrowm.addEventListener('click', handlerNextHourm);
-prevArrowm.addEventListener('click', handlerPrevHourm); */
+prevArrowm.addEventListener('click', handlerPrevHourm);
 
 function handlerNextHourm(event) {
-  if (currentStep >= 3) {
+  let items = document.querySelectorAll('.pm_info_item');
+  if (currentStep >= items.length - 2) {
     return;
   }
   currentStep++;
@@ -385,12 +389,12 @@ function handlerPrevHourm(event) {
 }
 
 function setPositionRightm() {
-  fivedays.style.transform += `translateX(-70px)`;
+  fivedays.style.transform += `translateX(-123px)`;
   fivedays.style.transitionDuration = '500ms';
 }
 
 function setPositionLeftm() {
-  fivedays.style.transform += `translateX(70px)`;
+  fivedays.style.transform += `translateX(123px)`;
   fivedays.style.transitionDuration = '500ms';
 }
 
