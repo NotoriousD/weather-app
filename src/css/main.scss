@@ -17,6 +17,11 @@
   fill: #ff6b08;
 }
 
+.d_right_icon svg :hover {
+  fill: black;
+  stroke: black;
+}
+
 .d_input-form {
   display: flex;
   flex-direction: row;
