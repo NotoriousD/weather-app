@@ -1,4 +1,8 @@
 import './styles.css';
+import '@pnotify/core/dist/BrightTheme.css';
+import '@pnotify/core/dist/Material.css';
+import '@pnotify/core/dist/PNotify.css';
+
 import './css/normalize.scss';
 import './css/inputAndSlider.scss';
 import './css/degree.scss';
