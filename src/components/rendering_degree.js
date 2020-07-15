@@ -1,4 +1,8 @@
 import weatherApi from '../components/weather_api_service.js';
+//vh
+import {
+  error
+} from '@pnotify/core';
 
 export const degree = document.querySelector('.vh_degree_container');
 const searchForm = document.querySelector('#search-form');
@@ -11,6 +15,17 @@ searchForm.addEventListener('submit', e => {
 
   weatherApi.fetchCurrentWeatherByCity(inputValue).then(data => {
     console.log(data);
+    //vh вставка PNotify если некоректный ввод
+    console.log('довжина', data);
+    if (data.cod === '404') {
+      error({
+        title: 'Uh Oh!',
+        text: data.message,
+        hide: true,
+        delay: 2000,
+      });
+    }
+    //====
     degree.innerHTML = renderDegree(data);
   });
 });
