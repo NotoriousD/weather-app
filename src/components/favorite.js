@@ -58,7 +58,7 @@ btn.addEventListener('click', () => {
             </div>
             `,
     );
-  }else if (!cities.includes(dataInput.value) && cities !== '') {
+  }else if (dataInput.value !== '' && !cities.includes(dataInput.value) && cities !== '') {
     state.push(dataInput.value);
     localStorage.setItem('city', JSON.stringify(state));
     $('.favorite__slider').slick(
@@ -74,8 +74,8 @@ btn.addEventListener('click', () => {
     );
   } else {
     error({
-      title: dataInput.value,
-      text: `Is already on your favorite list`,
+      title: 'Error',
+      text: `You didnt enter the city or it is already on your favorite list`,
     });
   }
 });
