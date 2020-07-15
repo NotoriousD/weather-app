@@ -21,20 +21,21 @@ let state = [];
 
 const getStoreCities = () => {
   state = JSON.parse(localStorage.getItem('city'));
-  console.log(state);
-  state.map(city => {
-    $('.favorite__slider').slick(
-      'slickAdd',
-      `
-        <div class="item">
-            <div class="city">
-                <button class="delete-city"></button>
-                <span class="city-text" data-city="${city}">${city}</span>
-            </div>  
-        </div>
-        `,
-    );
-  });
+  if (state) {
+    state.map(city => {
+      $('.favorite__slider').slick(
+        'slickAdd',
+        `
+            <div class="item">
+                <div class="city">
+                    <button class="delete-city"></button>
+                    <span class="city-text" data-city="${city}">${city}</span>
+                </div>  
+            </div>
+            `,
+      );
+    });
+  }
 };
 
 document.addEventListener('DOMContentLoaded', () => {
