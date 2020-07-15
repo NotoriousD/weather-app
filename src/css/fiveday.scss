@@ -15,7 +15,6 @@ img {
 .fiveday_block {
   width: 1060px;
   margin: auto;
-
 }
 
 .pm_section {
@@ -49,7 +48,6 @@ img {
 }
 
 .js-heading {
-
   margin-bottom: 14px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -223,13 +221,13 @@ img {
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 320px) {
   .pm_card_container {
     cursor: none;
   }
-
 }
 
 .pm_card_container:not(:last-child) {
@@ -302,6 +300,7 @@ img {
   margin: auto;
   justify-content: center;
   overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
