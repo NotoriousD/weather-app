@@ -15,8 +15,6 @@ $('.favorite__slider').slick({
 const btn = document.querySelector('.d_right_icon');
 const dataInput = document.querySelector('.d_input');
 
-localStorage.removeItem('City');
-
 let state = [];
 
 const getStoreCities = () => {
@@ -35,6 +33,8 @@ const getStoreCities = () => {
             `,
       );
     });
+  }else{
+      state = []
   }
 };
 
@@ -44,7 +44,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 btn.addEventListener('click', () => {
   let cities = JSON.parse(localStorage.getItem('city'));
-  if (!cities.includes(dataInput.value) && cities !== '') {
+  if(!cities){
+    state.push(dataInput.value);
+    localStorage.setItem('city', JSON.stringify(state));
+    $('.favorite__slider').slick(
+      'slickAdd',
+      `
+            <div class="item">
+                <div class="city">
+                    <button class="delete-city"></button>
+                    <span class="city-text" data-city="${dataInput.value}">${dataInput.value}</span>
+                </div>  
+            </div>
+            `,
+    );
+  }else if (!cities.includes(dataInput.value) && cities !== '') {
     state.push(dataInput.value);
     localStorage.setItem('city', JSON.stringify(state));
     $('.favorite__slider').slick(
